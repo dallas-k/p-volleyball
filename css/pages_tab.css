@@ -1,0 +1,56 @@
+.menu_tab_square {
+    height:80px;
+}
+
+.menu_tab_box {
+    width:1600px;
+    height:80px;
+    position: relative;
+    margin: auto;
+}
+
+.menu_tab {
+    width: 810px;
+    height: 80px;
+    background:#444;
+    box-sizing: border-box;
+    position: absolute;
+    top:20px;
+    left:220px;
+}
+.menu_tab h3, .menu_tab li {
+    float:left;
+    padding:28px;
+    color: white;
+    border-left: 1px solid white;
+    font-size:18px;
+    vertical-align: middle;
+}
+
+.menu_tab h3 {
+    margin-left:80px;
+}
+
+.menu_tab li {
+    padding-right: 120px;
+}
+.selected_tab {
+    margin-right:80px;
+}
+
+/* query */
+
+.query {
+    width:1200px;
+    height:280px;
+    border-bottom:1px solid #222;
+    margin: auto;
+    position: relative;
+}
+
+.query h3 {
+    position: absolute;
+    top: 120px;
+    left: 392px;
+    font-size:64px;
+}

@@ -1,0 +1,518 @@
+/* --------- main ----------- */
+
+/* banner  */
+.banner {
+    position: relative;
+    width:1200px;
+    margin: auto;
+}
+
+.banner_image {
+    display:block;
+}
+
+/* next match */
+
+.next_match {
+    display:block;
+    height:290px;
+    width:290px;
+    background: no-repeat url(/volleyball/images/next_match.jpg);
+    padding:100px 30px 20px 30px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 36px;
+    top: 36px;
+}
+.match_day {
+    position:absolute;
+    top:50px;
+    left:88px;
+    font-weight: bold;
+    color:red;
+    font-size:24px;
+}
+.match_location {
+    position:absolute;
+    top:95px;
+    left:100px;
+}
+
+.match_hanjun{
+    display:block;
+    background:url(/volleyball/images/hanjun_logo.jpg) no-repeat;
+    width:100px;
+    height:76px;
+    text-indent:-9999px;
+    position:absolute;
+    left:15px;
+    top:120px;
+}
+
+.versus {
+    display:block;
+    background:url(/volleyball/images/versus.jpg) no-repeat;
+    width: 61px;
+    height: 33px;
+    text-indent: -9999px;
+    position:absolute;
+    top:165px;
+    left:115px;
+}
+
+.match_woori{
+    display:block;
+    background:url(/volleyball/images/woori_logo.jpg) no-repeat;
+    width:100px;
+    height:76px;
+    text-indent:-9999px;
+    position:absolute;
+    right:15px;
+    top:120px;
+}
+
+.reserve_ticket {
+    display:block;
+    background: no-repeat url(/volleyball/images/reserve_ticket.jpg);
+    width: 190px;
+    height: 35px;
+    text-indent:-9999px;
+    position:absolute;
+    bottom:20px;
+    right:55px;
+}
+
+
+/* player */
+.player_background {
+    width:1200px;
+    height:359px;
+    background: no-repeat url(/volleyball/images/player_bg.jpg);
+    margin:auto;
+    position:relative;
+    margin-top:1px solid white;
+}
+
+.player_background .position {
+    float:left;
+    position:relative;
+    margin-right:10px;
+    letter-spacing: -2px;
+    top:90px;
+    left:60px;
+    background:#ffffff;
+    padding:5px;
+    width:60px;
+    text-align: center;
+    color:#ef7c7e;
+    font-size:18px;
+    cursor: pointer;
+}
+
+.player_list {
+    position:absolute;
+    height:160px;
+    top:160px;
+    left:70px;
+    width:400px;
+    display:none;
+}
+
+#left_players {
+    display: block;
+}
+
+.player_list li {
+    float:left;
+    margin-right:15px;
+    width:64px;
+    height:64px;
+    border-radius: 50%;
+    background-color:#ffffff;
+    box-sizing: border-box;
+    text-indent:10px;
+    line-height:12.0;
+    font-weight:bold;
+    cursor: pointer;
+}
+.plyaer_list li a{
+    color:white;
+}
+
+.player_list .sixth_player{
+    position:absolute;
+    top:100px;
+}
+
+.player_list li:hover {
+    background:#f7a520;
+}
+.position:hover{
+    background:#f7a520;
+    color:#ffffff;
+}
+
+
+/* player describe */
+
+.ply_desc {
+    position:absolute;
+    width:300px;
+    left:968px;
+    top:144px;
+    display: none;
+}
+
+.ply_desc dt {
+    position:absolute;
+    font-weight:bold;
+    font-size:48px;
+    top:-68px;
+    left:-112px;
+
+}
+
+.ply_desc dt+dd{
+    color: red;
+    position: absolute;
+    top: -64px;
+    left: 40px;
+    font-weight: bold;
+    font-size:36px;
+}
+
+.ply_desc dd {
+    padding:3px;
+    margin:8px 0;
+    font-size:18px;
+}
+
+
+/* team_rank */
+.team_rank {
+    width:1200px;
+    height:360px;
+    background:no-repeat url(/volleyball/images/team_rank.jpg);
+    margin:auto;
+    position: relative;
+}
+
+.rank_table {
+    position:absolute;
+    right:100px;
+    top:45px;
+    color: #eee;
+    font-size:16px;
+}
+.rank_table caption {
+    text-align:left;
+    padding:10px;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.rank_table table {
+    width:100%;
+    border-collapse:collapse
+}
+
+.rank_table th, .rank_table td {
+    padding:10px;
+}
+
+.table_th th {
+    border-top:1px #eee solid;
+}
+
+.table_myteam {
+    border:1px dashed yellow;
+}
+
+.table_more {
+    display:block;
+    height:25px;
+    width:25px;
+    background:url(/volleyball/images/lookmore.jpg) no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    right:10px;
+    top:15px;
+}
+
+/* content3 */
+
+.content3 {
+    width:1200px;
+    height:360px;
+    background:url(/volleyball/images/content3.jpg) no-repeat;
+    margin:auto;
+    position:relative;
+}
+
+.content3_event {
+    width:410px;
+    height:260px;
+    background:#ddd;
+    position:absolute;
+    top:50px;
+    left:150px;
+}
+
+.content3_news {
+    width:410px;
+    height:260px;
+    background:#ddd;
+    position:absolute;
+    top:50px;
+    right:150px;
+}
+
+.content3 h2 {
+    position:absolute;
+    left:50px;
+    top:30px;
+    color:red;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.content3 ul {
+    position:absolute;
+    left:25px;
+    top:80px;
+    line-height:3.0;
+}
+.content3 ul li:first-child {
+    list-style: none;
+    background: #aaa;
+    padding:5px;
+    box-sizing: border-box;
+    width:350px;
+    margin:0 auto 10px auto;
+    text-align:center;
+    color:beige;
+    border-radius: 10px;
+}
+
+.content3 ul li:nth-child(2) {
+    margin-left:20px;
+    width:320px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+.content3 ul li:nth-child(3) {
+    margin-left:20px;
+    width:320px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+.content3 ul li:nth-child(2)::before{
+    content: "•";
+    margin-right:5px;
+}
+.content3 ul li:nth-child(3)::before{
+    content: "•";
+    margin-right:5px;
+}
+
+.content3 a {
+    display:block;
+    width: 25px;
+    height: 25px;
+    background: no-repeat url(/volleyball/images/lookmore.jpg);
+    text-indent:-9999px;
+}
+
+.content3_event a {
+    top:35px;
+    right:40px;
+    position:absolute;
+}
+
+.content3_news a {
+    top:35px;
+    right:40px;
+    position:absolute;
+}
+
+
+/* side bar */
+
+.aside_box {
+    width:1400px;
+    margin:auto;
+    position:relative;
+}
+
+.aside_content {
+    width:110px;
+    height:438px;
+    position:absolute;
+    right:-100px;
+    bottom:150px;
+}
+
+.side_menu a {
+    display: block;
+    width:110px;
+    height:110px;
+    text-indent:-9999px;
+}
+
+#side_ticket a {
+    background:no-repeat url(/volleyball/images/side_ticket.jpg);
+}
+#side_qna a{
+    background:no-repeat url(/volleyball/images/side_qna.jpg);
+}
+#side_location a{
+    background:no-repeat url(/volleyball/images/side_location.jpg);
+}
+#side_calendar a {
+    background:no-repeat url(/volleyball/images/side_calendar.jpg);
+}
+
+
+/* sponsor */
+
+.sponsor {
+    width:1200px;
+    height:420px;
+    background:#e2dcd1;
+    margin: auto;
+    position:relative;
+    border:1px solid #e2dcd1;
+}
+
+.sponsor dt {
+    width:170px;
+    height:33px;
+    margin-top:15px;
+}
+
+.sponsor01 {
+    width:160px;
+    height:264px;
+    float:left;
+    margin-left:40px;
+    margin-top:10px;
+}
+.sponsor_container01{
+    margin-top:10px;
+}
+
+.sponsor_container01 dd {
+    width:162px;
+    height: 52px;
+    float:left;
+    margin:5px 0 30px 0;
+}
+
+.sponsor02 {
+    width:710px;
+    height:264px;
+    float:left;
+    position:absolute;
+    left:230px;
+    margin-top:10px;
+}
+
+.sponsor_container02 {
+    margin:10px auto 0 auto;
+    height:214px;
+}
+
+.sponsor_container02 dd {
+    width:162px;
+    height: 52px;
+    float:left;
+    margin:5px 3px 30px 3px;
+}
+
+.sponsor03 {
+    width:160px;
+    height:264px;
+    float:left;
+    position:absolute;
+    left:970px;
+    margin-top:10px;
+}
+
+.sponsor_container03 {
+    margin-top:10px;
+}
+
+.sponsor_container03 dd {
+    margin:5px 0 30px 0;
+    float:left;
+}
+
+/* sponsor img */
+
+.red_yellow_bar {
+    background: no-repeat url(/volleyball/images/red_yellow_bar.jpg);
+    box-sizing: border-box;
+    padding:0px 0px 0px 10px;
+    font-size:24px;
+}
+
+.spon_img a {
+    display: block;
+    width:162px;
+    height:52px;
+    text-indent: -9999px;
+}
+
+#spon_01 a{
+    background:url(/volleyball/images/spon_01.JPG) no-repeat;
+}
+#spon_02 a{
+    background:url(/volleyball/images/spon_02.JPG) no-repeat;
+}
+#spon_03 a{
+    background:url(/volleyball/images/spon_03.JPG) no-repeat;
+}
+#spon_04 a{
+    background:url(/volleyball/images/spon_04.JPG) no-repeat;
+}
+#spon_05 a{
+    background:url(/volleyball/images/spon_05.JPG) no-repeat;
+}
+#spon_06 a{
+    background:url(/volleyball/images/spon_06.JPG) no-repeat;
+}
+#spon_07 a{
+    background:url(/volleyball/images/spon_07.JPG) no-repeat;
+}
+#spon_08 a{
+    background:url(/volleyball/images/spon_08.JPG) no-repeat;
+}
+#spon_09 a{
+    background:url(/volleyball/images/spon_09.JPG) no-repeat;
+}
+#spon_10 a{
+    background:url(/volleyball/images/spon_10.JPG) no-repeat;
+}
+#spon_11 a{
+    background:url(/volleyball/images/spon_11.JPG) no-repeat;
+}
+#spon_12 a{
+    background:url(/volleyball/images/spon_12.JPG) no-repeat;
+}
+#spon_13 a{
+    background:url(/volleyball/images/spon_13.JPG) no-repeat;
+}
+#spon_14 a{
+    background:url(/volleyball/images/spon_14.JPG) no-repeat;
+}
+#spon_15 a{
+    background:url(/volleyball/images/spon_15.JPG) no-repeat;
+}
+#spon_16 a{
+    background:url(/volleyball/images/spon_16.JPG) no-repeat;
+}
+#spon_17 a{
+    background:url(/volleyball/images/spon_17.JPG) no-repeat;
+}

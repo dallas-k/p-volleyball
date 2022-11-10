@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+
+        .wrap {
+            min-width:640px;
+            max-width:920px;
+            margin: auto;
+        }
+
+        img {
+            margin:40px auto 10px;
+            display:block;
+        }
+        h1 {
+            text-align: center;
+            font-size:18px;
+            margin-bottom:32px;
+        }
+        .container {
+            width:50%;
+            margin: auto;
+        }
+
+        input[type=text], input[type=password] {
+            border:1px solid #ccc;
+            padding:12px 18px 12px 18px;
+            width:100%;
+            margin:8px 0;
+            box-sizing: border-box;
+            display:inline-block;
+        }
+        button {
+            outline: none;
+            border: none;
+            color: white;
+        }
+
+        button.login_btn {
+            width:100%;
+            background-color: red;
+            padding:8px 0;
+            margin:4px 0 8px;
+            cursor: pointer;
+        }
+
+        .under_menu {
+            margin-top:24px;
+            background-color:#ccc;
+            padding:20px 10px;
+            position: relative;
+        }
+        .under_menu button {
+            background-color: #f7a520;
+            padding:8px;
+            cursor: pointer;
+        }
+        .under_menu span {
+            position: absolute;
+            right:16px;
+            top:26px;
+        }
+        .under_menu span a {
+            color: blue;
+            text-decoration-line: underline;
+            cursor: pointer;
+        }
+
+        .err_msg {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: red;
+            font-style:italic;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <img src="images/hanjun_logo.jpg" alt="">
+        <h1>한국전력배구단 로그인</h1>
+
+        <div class="container">
+            <form action="login_ok.php" method="post" onsubmit="return loginSubmit()">
+                <div class="id_area">
+                    <label for="u_id">아이디</label>
+                    <input type="text" placeholder="ID" name="u_id" id="u_id"/>
+                    <br><span class="err_msg" id="err_id"></span>
+                </div>
+                
+                <div class="psw_area">
+                    <label for="pwd">비밀번호</label>
+                    <input type="text" placeholder="패스워드" name="pwd" id="pwd"/>
+                    <br><span class="err_msg" id="err_pw"></span>
+                </div>
+
+                <button type="submit" class="login_btn">로그인</button>
+                <label>
+                    <input type="checkbox" checked="checked">아이디를 기억합니다
+                </label>
+                <div class="under_menu">
+                    <button class="register_btn">회원가입</button>
+                    <span><a>비밀번호</a>를 잊으셨나요?</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function loginSubmit(){
+            let u_id, u_pw, err_id, err_pw;
+            u_id = document.getElementById("u_id");
+            u_pw = document.getElementById("pwd");
+            err_id = document.getElementById("err_id");
+            err_pw = document.getElementById("err_pw");
+
+
+            if(!u_id.value){
+                if(!u_pw.value){
+                    err_id.textContent = "ID를 입력해주세요";
+                    err_pw.textContent = "패스워드를 입력해주세요";
+                    return false;
+                } else {
+                    err_id.textContent = "ID를 입력해주세요";
+                    err_pw.textContent = "";
+                    return false;
+                }
+            } else {
+                if(!u_pw.value) {
+                    err_id.textContent = "";
+                    err_pw.textContent = "패스워드를 입력해주세요";
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

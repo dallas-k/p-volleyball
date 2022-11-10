@@ -1,0 +1,149 @@
+@import url("pages_tab.css");
+
+/* ---------- Main ------------- */
+
+/* form */
+
+.form_container {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.btn_box {
+    margin-top: 60px;
+    margin-left: 780px;
+}
+
+.form_container button {
+    width:150px;
+    padding-bottom:20px;
+    background-color: red;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding:6px 24px;
+    margin-right:12px;
+}
+
+.title_box {
+    margin-top: 24px;
+    margin-left: 72px;
+}
+
+.title_box label{
+    font-size:24px;
+    margin-right:8px;
+}
+.title_box input{
+    font-size:24px;
+    width:480px;
+}
+
+.form_container textarea {
+    margin: 24px 0 120px 72px;
+    font-size: 1.6em;
+}
+.form_container textarea::placeholder {
+    font-size:1.6em;
+}
+
+/* -------- Footer --------------- */
+
+
+
+/* noticement */
+
+.notice {
+    background:#222;
+    color:#eee;
+    border-top: 1px solid #222;
+}
+
+.notice_box{
+    width:1200px;
+    margin:auto;
+}
+
+/* 약관 */
+
+.noticement {
+    position:relative;
+    height:40px;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+.noticement ul {
+    height:40px;
+    float: right;
+    margin-right:50px;
+}
+
+.noticement ul li {
+    float:left;
+    margin-right:15px;
+    font-size:18px;
+    padding:5px;
+    cursor: pointer;
+}
+
+.company {
+    position:relative;
+    padding: 20px 0 80px 260px;
+    border-top:#aaa 1px solid;
+}
+
+.company_info {
+    height:20px;
+    line-height: 2.0;
+    position:absolute;
+    left:160px;
+    font-size:18px;
+    top:10px;
+}
+
+.company_info p:nth-child(1) {
+    float: left;
+}
+.company_info p:nth-child(2) {
+    float: left;
+}
+.company_info p:nth-child(3){
+    clear:both;
+}
+.company_info p:first-child::after{
+    content: "/";
+    margin:0 10px;
+}
+
+.company_sns {
+    height:20px;
+    float:right;
+    margin-right:20px;
+}
+
+.company_sns li {
+    float:left;
+}
+
+.company_sns li:nth-child(1)::after{
+    content: "/";
+    margin:0 10px;
+}
+
+
+
+.logo_black {
+    display:block;
+    background: no-repeat url(images/logo_black.png);
+    background-size:115%;
+    width: 75px;
+    height: 75px;
+    text-indent:-9999px;
+    position:absolute;
+    top: 80px;
+    left:20px;
+}
