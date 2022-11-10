@@ -1,10 +1,12 @@
 <?php
 
-include "c:/xampp/htdocs/volleyball/back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
 $idx = $_POST['article_idx'];
 $title = $_POST['qna_title'];
 $content = $_POST['qna_content'];
+$content = str_replace("'","\'",$content);
+$content = str_replace('"','\"',$content);
 
 $sql = "UPDATE board SET title='$title', content='$content' WHERE idx = $idx;";
 

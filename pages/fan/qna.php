@@ -1,4 +1,5 @@
-<?php include "../../back/inc/connect.php";
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
 $sql = "SELECT * FROM board ORDER BY idx DESC;";
 $result = mysqli_query($dbcon, $sql);

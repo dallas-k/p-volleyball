@@ -1,6 +1,6 @@
 <?php
 
-include "c:/xampp/htdocs/volleyball/back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
 // 데이터 가져오기
 $u_name = $_POST["u_name"];

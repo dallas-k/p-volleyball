@@ -1,7 +1,7 @@
 <?php
 
-include "c:/xampp/htdocs/volleyball/back/inc/connect.php";
-include "c:/xampp/htdocs/volleyball/back/inc/session.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 
 $u_name = $_POST["u_name"];
 $pwd = $_POST["pwd"];

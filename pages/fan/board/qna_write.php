@@ -1,5 +1,5 @@
 <?php
-include "c:/xampp/htdocs/volleyball/back/inc/session.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 if(!$s_idx){
     echo "<script>
     alert('로그인을 해주세요');

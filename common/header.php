@@ -1,4 +1,4 @@
-<?php include "../back/inc/session.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";?>
 
 <style>
     /* ----------- Header --------------------*/
@@ -272,7 +272,7 @@
     <div class='user_menu_innerBox'>
         <h2 class='screen_out'>사용자 메뉴</h2>
         <ul>
-            <li class='usermenu' id='user_qna'><a href="../volleyball/pages/fan/qna.html">문의사항</a></li>
+            <li class='usermenu' id='user_qna'><a href="/volleyball/pages/fan/qna.php">문의사항</a></li>
             <?php if(!$s_idx) {?>
             <li class='usermenu' id='user_login'><a onclick='openLogin()'>로그인</a></li>
             <li class='usermenu' id='user_signup'><a onclick="openSignup()">회원가입</a></li>

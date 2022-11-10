@@ -1,6 +1,6 @@
 <?php
 
-include "../../back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
 $u_id = $_POST["u_id"];
 $pwd = $_POST["pwd"];

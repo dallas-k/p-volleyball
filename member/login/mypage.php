@@ -1,6 +1,6 @@
 <?php
-include "c:/xampp/htdocs/volleyball/back/inc/connect.php";
-include "c:/xampp/htdocs/volleyball/back/inc/session.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 $sql = "SELECT * FROM members WHERE idx=$s_idx;";
 $result = mysqli_query($dbcon, $sql);
 $array = mysqli_fetch_array($result);
