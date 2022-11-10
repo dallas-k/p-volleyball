@@ -278,7 +278,7 @@
             <li class='usermenu' id='user_signup'><a onclick="openSignup()">회원가입</a></li>
             <?php } else {?>
             <li class='loginmenu' id='myname'><span><?php echo '\''.$s_name.'\''."님";?></span></li>
-            <li class='loginmenu' id='mypage'><a>마이페이지</a></li>
+            <li class='loginmenu' id='mypage'><a onclick="myPage()">마이페이지</a></li>
             <li class='loginmenu' id='logout'><a onclick="logout()">로그아웃</a></li>
             <?php } ?>
             <li class='top_ico' id='ico_facebook'><a>페이스북</a></li>
@@ -310,6 +310,9 @@
     }
     function openSignup() {
         window.open('/volleyball/member/signup/signup.html','signupPopup', 'width=640, height=520, left=200, top=50')
+    }
+    function myPage() {
+        window.open('/volleyball/member/login/mypage.php','Mypage', 'width=640, height=520, left=200, top=50')
     }
     function logout() {
         window.open("/volleyball/member/login/logout.php")
