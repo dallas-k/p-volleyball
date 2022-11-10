@@ -72,15 +72,22 @@ $check_news_n = $array["news_subscribe"] === 'N' ? 'checked' : "";
             width:600px;
             margin:auto;
         }
+        .button_list button {
+            background-color:rosybrown;
+            color:white;
+        }
+        #GetId span {
+            margin-left:72px;
+        }
 
     </style>
 </head>
 <body>
-    <form action="signup_ok.php" method="post" onsubmit="return submitForm()">
+    <form action="mypage_modify.php" method="post" onsubmit="return submitForm()">
         <fieldset>
             <legend>기본정보입력</legend>
-            <div class="form_group">
-                <p> 아이디 <?php echo $array['u_id'];?>
+            <div class="form_group" id="GetId">
+                <p> 아이디 <span><?php echo $array['u_id'];?></span></p>
             </div>
 
             <div class="form_group">
@@ -95,7 +102,7 @@ $check_news_n = $array["news_subscribe"] === 'N' ? 'checked' : "";
                 </div>
                 <div class="pwd_announce">
                     <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요">
-                    <span class="err_msg" id="err_psw"></span>
+                    <br><span class="err_msg" id="err_psw"></span>
                     <p>* 비밀번호는 8~12자의 영문 대문자, 영문 소문자, 숫자, 특수문자를 혼합해서 사용할 수 있습니다.</p>
                 </div>
                 
@@ -153,8 +160,6 @@ $check_news_n = $array["news_subscribe"] === 'N' ? 'checked' : "";
             err_msg = document.getElementsByClassName("err_msg");
             txt_req = "필수 입력 값입니다"
 
-            // ID 검사
-            
             // 이름 검사
             let regName = /^[가-힣a-zA-Z]{2,}$/;
             if(!user_name.value){
@@ -174,14 +179,10 @@ $check_news_n = $array["news_subscribe"] === 'N' ? 'checked' : "";
 
             // PW 검사
             let regPw = /^[0-9a-zA-Z_-~!@#$%^&*()<>?]{4,20}$/;
-            if(!user_psw.value){
-                err_msg[1].textContent = "필수 입력 값입니다";
-                user_psw.focus();
-                return false;
-            } else {
-                if(!regPw.test(user_psw.value)) {
+            if(user_pwd.value){
+                if(!regPw.test(user_pwd.value)) {
                     err_msg[1].textContent = "비밀번호는 영어 대소문자, 숫자, 특수문자를 이용해 4~20자로 만들어주세요";
-                    user_psw.focus();
+                    user_pwd.focus();
                     return false;
                 }
                 else {
