@@ -53,20 +53,20 @@
 
 
 .table tr td:nth-child(1){
-    width:40px;
+    width:80px;
 }
 
 .table tr td:nth-child(2){
-    width:480px;
+    width:160px;
 }
 .table tr td:nth-child(3){
-    width:200px;
+    width:480px;
 }
 .table tr td:nth-child(4){
-    width:240px;
+    width:160px;
 }
 .table tr td:nth-child(5){
-    width:60px;
+    width:160px;
 }
 
 .table tr:nth-child(odd){
@@ -81,9 +81,8 @@
     font-size:28px;
 }
 .table td {
-    padding:8px 0;
+    padding:8px 0px;
 }
-
 
 /* page_move */
 

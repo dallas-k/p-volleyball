@@ -1,7 +1,7 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
-$sql = "SELECT * FROM board ORDER BY idx DESC;";
+$sql = "SELECT * FROM news ORDER BY idx DESC;";
 $result = mysqli_query($dbcon, $sql);
 $num = mysqli_num_rows($result);
 
@@ -39,7 +39,7 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/volleyball/css/reset.css">
-    <link rel="stylesheet" href="/volleyball/css/qna_style.css">
+    <link rel="stylesheet" href="/volleyball/css/news_style.css">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         $(function(){
@@ -58,7 +58,7 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
         <main class="main" id="main" onmouseover="menuOut()">
             <div id="page-main"></div>
             <div class="title">
-                <h2>FAN</h2>
+                <h2>NEWS</h2>
             </div>
             <div class="menu_tab_square">
                 <div class="menu_tab_box">
@@ -75,7 +75,7 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
             </div>
 
             <div class="query">
-                <h3>구단 문의사항</h3>
+                <h3>NEWS</h3>
             </div>
 
             <div class="search_bar_box">
@@ -94,26 +94,26 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
             <section class="table_box">
                 <table class="table">
                     <tr class="table_th">
-                        <th>number</th>
-                        <th>title</th>
-                        <th>writer</th>
-                        <th>date</th>
-                        <th>click</th>
+                        <th>번호</th>
+                        <th>매체</th>
+                        <th>제목</th>
+                        <th>원문보기</th>
+                        <th>조회수</th>
                     </tr>
 
                     <?php
                     $start = ($page - 1) * $article_per_page;
 
-                    $sql = "SELECT * FROM board ORDER BY idx DESC LIMIT $start, $article_per_page;";
+                    $sql = "SELECT * FROM news ORDER BY idx DESC LIMIT $start, $article_per_page;";
 
                     $result = mysqli_query($dbcon, $sql);
                     $i = $num - (($page - 1) * $article_per_page);
                     while($array = mysqli_fetch_array($result)){ ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><a href="board/article.php?idx=<?php echo $array['idx']?>"><?php echo $array["title"]; ?></a></td>
-                        <td><?php echo $array["u_name"]; ?></td>
-                        <td><?php echo substr($array["sign_date"],0,10); ?></td>
+                        <td><?php echo $array["n_company"]; ?></td>
+                        <td><a href="news/view.php?idx=<?php echo $array['idx']?>"><?php echo $array["n_title"]; ?></a></td>
+                        <td><a class="news_move" href="<?php echo $array["source"];?>">원문 보기</a></td>
                         <td><?php echo $array["click"]; ?></td>
                     </tr>
                     <?php $i--;} ?>

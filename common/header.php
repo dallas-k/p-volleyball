@@ -252,7 +252,7 @@
             </ul>
 
             <ul class='menu_specific' id='menu_news_list'>
-                <li><a href="/volleyball/pages/news/news.html">뉴스</a></li>
+                <li><a href="/volleyball/pages/news/news.php">뉴스</a></li>
                 <li><a href="/volleyball/pages/news/noticement.html">공지사항</a></li>
             </ul>
 

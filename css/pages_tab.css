@@ -49,8 +49,8 @@
 }
 
 .query h3 {
-    position: absolute;
-    top: 120px;
-    left: 392px;
+    box-sizing: border-box;
+    padding-top:120px;
+    text-align:center;
     font-size:64px;
 }
