@@ -212,7 +212,7 @@
 
 <div class='title_bar'>
     <h1 class='logo_color'>
-        <a href='/volleyball/index.html'>한국전력 배구단</a>
+        <a href='/volleyball/index.php'>한국전력 배구단</a>
     </h1>
 </div>
 

@@ -1,3 +1,9 @@
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+$sql = "SELECT * FROM news ORDER BY idx DESC LIMIT 0, 3;";
+$result = mysqli_query($dbcon, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -363,17 +369,17 @@
                         <li>한국전력 배구단 팬 감사대축제</li>
                         <li>빅스톰과 함께하는 크리스마스 경기 이벤트</li>
                     </ul>
-                    <a href="/volleyball/pages/fan/event.html">이벤트 더 보기</a>
+                    <a class="more" href="/volleyball/pages/fan/event.html">이벤트 더 보기</a>
                 </section>
 
                 <section class="content3_news">
                     <h2>뉴스</h2>
                     <ul>
-                        <li>한전 야전사령관 김광국의 꿈 "우승 세터 한 번 해봐야죠"</li>
-                        <li>첫 성인대표팀 발탁 박진웅, "세러머니 기대해주세요"</li>
-                        <li>한전 빅스톰 선수단 "홍천 배구 꿈나무" 육성 힘쓰다</li>
+                        <?php while($array = mysqli_fetch_array($result)) { ?>
+                        <li><a href="<?php echo $array['source'];?>"><?php echo mb_strimwidth($array["n_title"],0,48,"...","utf-8");?></a></li>
+                        <?php } ?>
                     </ul>
-                    <a href="/volleyball/pages/news/news.html">뉴스 더보기</a>
+                    <a class="more" href="/volleyball/pages/news/news.html">뉴스 더보기</a>
                 </section>
             </div>
                 

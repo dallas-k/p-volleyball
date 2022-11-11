@@ -269,8 +269,8 @@
 
 .content3 h2 {
     position:absolute;
-    left:50px;
-    top:30px;
+    left:36px;
+    top:28px;
     color:red;
     font-weight:bold;
     font-size:24px;
@@ -282,61 +282,30 @@
     top:80px;
     line-height:3.0;
 }
-.content3 ul li:first-child {
+.content3 ul li a {
+    display:block;
+    font-size:14px;
     list-style: none;
     background: #aaa;
     padding:5px;
     box-sizing: border-box;
     width:350px;
-    margin:0 auto 10px auto;
+    margin:0 auto 16px 4px;
     text-align:center;
     color:beige;
     border-radius: 10px;
 }
 
-.content3 ul li:nth-child(2) {
-    margin-left:20px;
-    width:320px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow:hidden;
-}
-.content3 ul li:nth-child(3) {
-    margin-left:20px;
-    width:320px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow:hidden;
-}
-.content3 ul li:nth-child(2)::before{
-    content: "•";
-    margin-right:5px;
-}
-.content3 ul li:nth-child(3)::before{
-    content: "•";
-    margin-right:5px;
-}
-
-.content3 a {
+.content3 .more {
     display:block;
     width: 25px;
     height: 25px;
     background: no-repeat url(/volleyball/images/lookmore.jpg);
     text-indent:-9999px;
-}
-
-.content3_event a {
-    top:35px;
-    right:40px;
+    top:32px;
+    right:36px;
     position:absolute;
 }
-
-.content3_news a {
-    top:35px;
-    right:40px;
-    position:absolute;
-}
-
 
 /* side bar */
 
