@@ -1,0 +1,31 @@
+@import url("pages_tab.css");
+
+.container {
+    width:1000px;
+    margin:auto;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "desc desc desc"
+        "content content content";
+}
+
+.item_title {
+    grid-area:header;
+    padding:20px 0;
+    font-size:24px;
+    text-align:center;
+}
+.item_title h3{
+    margin-top:30px;
+}
+.item_desc {
+    grid-area:desc;
+    display: flex;
+}
+.item_desc p {
+    margin-top:30px;
+    width:33%;
+    font-size:14px;
+}
+.item_content {grid-area:content;}

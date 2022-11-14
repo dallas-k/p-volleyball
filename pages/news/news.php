@@ -112,7 +112,7 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
                     <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $array["n_company"]; ?></td>
-                        <td><a href="news/view.php?idx=<?php echo $array['idx']?>"><?php echo $array["n_title"]; ?></a></td>
+                        <td><a href="news/news_view.php?idx=<?php echo $array['idx']?>"><?php echo $array["n_title"]; ?></a></td>
                         <td><a class="news_move" href="<?php echo $array["source"];?>">원문 보기</a></td>
                         <td><?php echo $array["click"]; ?></td>
                     </tr>

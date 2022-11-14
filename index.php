@@ -379,7 +379,7 @@ $result = mysqli_query($dbcon, $sql);
                         <li><a href="<?php echo $array['source'];?>"><?php echo mb_strimwidth($array["n_title"],0,48,"...","utf-8");?></a></li>
                         <?php } ?>
                     </ul>
-                    <a class="more" href="/volleyball/pages/news/news.html">뉴스 더보기</a>
+                    <a class="more" href="/volleyball/pages/news/news.php">뉴스 더보기</a>
                 </section>
             </div>
                 
