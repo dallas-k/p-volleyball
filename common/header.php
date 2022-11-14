@@ -245,7 +245,7 @@
             </ul>
 
             <ul class='menu_specific' id='menu_game_list'>
-                <li><a href="/volleyball/pages/game/calendar.html">경기일정, 결과</a></li>
+                <li><a href="/volleyball/pages/game/calendar.php">경기일정, 결과</a></li>
                 <li><a href="/volleyball/pages/game/result.html">경기기록실</a></li>
                 <li><a href="/volleyball/pages/game/rank.html">팀종합순위</a></li>
                 <li><a href="/volleyball/pages/game/reservation.html">티켓예매</a></li>
