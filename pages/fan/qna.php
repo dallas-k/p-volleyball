@@ -46,8 +46,9 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
             $("#header").load("/volleyball/common/header.php");
             $("#footer").load("/volleyball/common/footer.html");
             $("#page-main").load("/volleyball/common/page-main.html");
-
-            
+            $('.menu_box').click(function(){
+                $(this).find(".not_selected").slideToggle();
+            })
         });
     </script>
 </head>
@@ -63,12 +64,24 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
             <div class="menu_tab_square">
                 <div class="menu_tab_box">
                     <section class="menu_tab">
-                        <h3>첫화면</h3>
-                        <ul>
-                            <li class="selected_tab">FAN</li>
+                        <div class='box_blank'></div>
+                        <h3><a href="/volleyball/index.php">첫화면</a></h3>
+                        <ul class="menu_box" id="box1">
+                            <li>FAN</li>
+                            <div class="not_selected">
+                                <li><a href="/volleyball/pages/club/history.html">CLUB</a></li>
+                                <li><a href="/volleyball/pages/team/player.html">TEAM</a></li>
+                                <li><a href="/volleyball/pages/game/calendar.php">GAME</a></li>
+                                <li><a href="/volleyball/pages/news/news.php">NEWS</a></li>
+                                <li><a href="/volleyball/pages/fan/qna.php">FAN</a></li>
+                            </div>
                         </ul>
-                        <ul>
-                            <li>구단 문의</li>
+                        <ul class="menu_box" id="box2">
+                        <li>구단 문의사항</li>
+                            <div class="not_selected">
+                                <li><a href="/volleyball/pages/news/news.php"> </a></li>
+                                <li><a href="/volleyball/pages/news/noticement.html"> </a></li>
+                            </div>
                         </ul>
                     </section>
                 </div>

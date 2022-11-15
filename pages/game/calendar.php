@@ -15,6 +15,9 @@
             $("#header").load("/volleyball/common/header.php");
             $("#footer").load("/volleyball/common/footer.html");
             $("#page-main").load("/volleyball/common/page-main.html");
+            $('.menu_box').click(function(){
+                $(this).find(".not_selected").slideToggle();
+            })
         });
     </script>
 </head>
@@ -28,12 +31,24 @@
         <div class="menu_tab_square">
             <div class="menu_tab_box">
                 <section class="menu_tab">
-                    <h3>첫화면</h3>
-                    <ul>
-                        <li class="selected_tab">FAN</li>
+                    <div class='box_blank'></div>
+                    <h3><a href="/volleyball/index.php">첫화면</a></h3>
+                    <ul class="menu_box" id="box1">
+                        <li>NEWS</li>
+                        <div class="not_selected">
+                            <li><a href="/volleyball/pages/club/history.html">CLUB</a></li>
+                            <li><a href="/volleyball/pages/team/player.html">TEAM</a></li>
+                            <li><a href="/volleyball/pages/game/calendar.php">GAME</a></li>
+                            <li><a href="/volleyball/pages/news/news.php">NEWS</a></li>
+                            <li><a href="/volleyball/pages/fan/qna.php">FAN</a></li>
+                        </div>
                     </ul>
-                    <ul>
-                        <li>구단 문의</li>
+                    <ul class="menu_box" id="box2">
+                        <li>FAN</li>
+                        <div class="not_selected">
+                            <li><a href="/volleyball/pages/news/news.php">뉴스</a></li>
+                            <li><a href="/volleyball/pages/news/noticement.html">공지사항</a></li>
+                        </div>
                     </ul>
                 </section>
             </div>
@@ -42,14 +57,14 @@
         <div class="query">
             <h3>일정 및 결과</h3>
         </div>
-        <div>
+        <div class="table_box">
             <table>
                 <tr>
-                    <th>날짜</th>
-                    <th>시간</th>
-                    <th>경기</th>
-                    <th>장소</th>
-                    <th>라운드</th>
+                    <th class='table_header' id='header1'>날짜</th>
+                    <th class='table_header' id='header2'>시간</th>
+                    <th class='table_header' id='header3'>경기</th>
+                    <th class='table_header' id='header4'>장소</th>
+                    <th class='table_header' id='header5'>라운드</th>
                 </tr>
 
                 <?php
