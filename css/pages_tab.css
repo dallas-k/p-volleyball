@@ -46,18 +46,29 @@
 #box1 {
     border-right:1px solid white;
 }
-.menu_box li {
+.menu_box li{
     box-sizing: border-box;
     width:330px;
     height:80px;
+    cursor:pointer;
+    display:block;
+    color:white;
     font-size:36px;
     padding:14px 30px;
+}
+.menu_box li:hover {
+    background-color: red;
+}
+.menu_box li a{
+    display:block;
     color:white;
+    font-size:36px;
 }
 .menu_box .not_selected {
     background-color:#666;
     position:relative;
     z-index:1;
+    display:none;
 }
 
 

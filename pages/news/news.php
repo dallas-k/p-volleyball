@@ -70,25 +70,18 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
                         <ul class="menu_box" id="box1">
                             <li>FAN</li>
                             <div class="not_selected">
-                                <li>CLUB</li>
-                                <li>TEAM</li>
-                                <li>MATCH</li>
-                                <li>NEWS</li>
-                                <li>TICKETS</li>
-                                <li>FANZONE</li>
-                                <li>ACTIVITIES</li>
+                                <li><a href="/volleyball/pages/">CLUB</a></li>
+                                <li><a href="/volleyball/pages/">TEAM</a></li>
+                                <li><a href="/volleyball/pages/">GAME</a></li>
+                                <li><a href="/volleyball/pages/">NEWS</a></li>
+                                <li><a href="/volleyball/pages/">FAN</a></li>
                             </div>
                         </ul>
                         <ul class="menu_box" id="box2">
                         <li>FAN</li>
                             <div class="not_selected">
-                                <li>CLUB</li>
-                                <li>TEAM</li>
-                                <li>MATCH</li>
-                                <li>NEWS</li>
-                                <li>TICKETS</li>
-                                <li>FANZONE</li>
-                                <li>ACTIVITIES</li>
+                                <li><a href="/volleyball/pages/">CLUB</a></li>
+                                <li><a href="/volleyball/pages/">TEAM</a></li>
                             </div>
                         </ul>
                     </section>
