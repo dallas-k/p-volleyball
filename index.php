@@ -1,7 +1,6 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
-$sql = "SELECT * FROM news ORDER BY idx DESC LIMIT 0, 3;";
-$result = mysqli_query($dbcon, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -373,10 +372,14 @@ $result = mysqli_query($dbcon, $sql);
                 </section>
 
                 <section class="content3_news">
+                    <?php
+                    $sql = "SELECT * FROM news ORDER BY idx DESC LIMIT 0, 3;";
+                    $result = mysqli_query($dbcon, $sql);
+                    ?>
                     <h2>뉴스</h2>
                     <ul>
                         <?php while($array = mysqli_fetch_array($result)) { ?>
-                        <li><a href="<?php echo $array['source'];?>"><?php echo mb_strimwidth($array["n_title"],0,48,"...","utf-8");?></a></li>
+                        <li><a href="/volleyball/pages/news/news/news_view.php?idx=<?php echo $array["idx"];?>"><?php echo mb_strimwidth($array["n_title"],0,48,"...","utf-8");?></a></li>
                         <?php } ?>
                     </ul>
                     <a class="more" href="/volleyball/pages/news/news.php">뉴스 더보기</a>
@@ -388,7 +391,7 @@ $result = mysqli_query($dbcon, $sql);
                 <h2 class="screen_out">바로가기</h2>
                     <ul>    
                         <li id="side_ticket" class="side_menu"><a href="/volleyball/pages/game/reservation.html">티켓예매</a></li>
-                        <li id="side_qna" class="side_menu"><a href="/volleyball/pages/fan/qna.html">질의게시판</a></li>
+                        <li id="side_qna" class="side_menu"><a href="/volleyball/pages/fan/qna.php">질의게시판</a></li>
                         <li id="side_location" class="side_menu"><a href="/volleyball/pages/club/stadium.html">위치 정보</a></li>
                         <li id="side_calendar" class="side_menu"><a href="/volleyball/pages/game/calendar.html">경기 일정</a></li>
                     </ul>
