@@ -1,0 +1,187 @@
+{
+    "left" : [
+        {
+            "id" : "seo1",
+            "name" : "서재덕",
+            "birth" : "1989-07-21",
+            "height" : 194,
+            "weight" : 94,
+            "register" : 2011,
+            "school" : ["문흥중", "전자공고", "성균관대"]
+        },
+        {
+            "id" : "lim14",
+            "name" : "임성진",
+            "birth" : "1999-01-11",
+            "height" : 195,
+            "weight" : 85,
+            "register" : 2020,
+            "school" : ["제천중", "제천산업고", "성균관대"]
+        },
+        {
+            "id" : "gong13",
+            "name" : "공재학",
+            "birth" : "1991-06-27",
+            "height" : 194,
+            "weight" : 87,
+            "register" : 2017,
+            "school" : ["문흥중", "광주전자공고", "인하대"]
+        },
+        {
+            "id" : "lee7",
+            "name" : "이시몬",
+            "birth" : "1992-11-09",
+            "height" : 192,
+            "weight" : 86,
+            "register" : 2015,
+            "school" : ["홍익대"]
+        },
+        {
+            "id" : "kang9",
+            "name" : "강우석",
+            "birth" : "1999-01-16",
+            "height" : 188,
+            "weight" : 72,
+            "register" : 2011,
+            "school" : ["성균관대"]
+        },
+        {
+            "id" : "ta4",
+            "name" : "타이스",
+            "birth" : "1991-09-18",
+            "height" : 204,
+            "weight" : 95,
+            "register" : 2022,
+            "school" : []
+        }
+    ],
+
+    "center" : [
+        {
+            "id" : "shin20",
+            "name" : "신영석",
+            "birth" : "1986-10-04",
+            "height" : 200,
+            "weight" : 93,
+            "register" : 2008,
+            "school" : ["인장중", "인창고", "경기대"]
+        },
+        {
+            "id" : "park18",
+            "name" : "박지윤",
+            "birth" : "1996-03-04",
+            "height" : 197,
+            "weight" : 92,
+            "register" : 2019,
+            "school" : ["남성중", "남성고", "성균관대"]
+        },
+        {
+            "id" : "park17",
+            "name" : "박찬웅",
+            "birth" : "1997-08-13",
+            "height" : 196,
+            "weight" : 78,
+            "register" : 2020,
+            "school" : ["연현중", "영생고", "한양대"]
+        },
+        {
+            "id" : "cho11",
+            "name" : "조근호",
+            "birth" : "1990-05-23",
+            "height" : 199,
+            "weight" : 89,
+            "register" : 2018,
+            "school" : ["부안중", "평촌고", "경기대"]
+        },
+        {
+            "id" : "park19",
+            "name" : "박태환",
+            "birth" : "1995-01-05",
+            "height" : 196,
+            "weight" : 81,
+            "register" : 2018,
+            "school" : ["송림고", "한양대"]
+        }
+    ],
+
+      "right" : [
+        {
+            "id" : "park3",
+            "name" : "박철우",
+            "birth" : "1985-07-25",
+            "height" : 199,
+            "weight" : 95,
+            "register" : 2004,
+            "school" : ["명지대"]
+        },
+        {
+            "id" : "lee10",
+            "name" : "이태호",
+            "birth" : "2000-08-16",
+            "height" : 203,
+            "weight" : 90,
+            "register" : 2018,
+            "school" : ["영생고"]
+        },
+        {
+            "id" : "kim16",
+            "name" : "김동영",
+            "birth" : "1996-07-02",
+            "height" : 186,
+            "weight" : 79,
+            "register" : 2019,
+            "school" : ["함안중", "군북고", "중부대"]
+        }
+    ],
+
+      "setter" : [
+        {
+            "id" : "kim15",
+            "name" : "김광국",
+            "birth" : "1987-08-13",
+            "height" : 187,
+            "weight" : 77,
+            "register" : 2009,
+            "school" : ["동명중", "동명고", "성균관대"]
+        },
+        {
+            "id" : "lee2",
+            "name" : "이민욱",
+            "birth" : "1995-02-10",
+            "height" : 184,
+            "weight" : 77,
+            "register" : 2019,
+            "school" : ["송림중", "송림고", "경기대"]
+        }
+    ],
+
+      "libero" : [
+        {
+            "id" : "kum4",
+            "name" : "금태용",
+            "birth" : "1996-06-11",
+            "height" : 187,
+            "weight" : 80,
+            "register" : 2018,
+            "school" : ["제천산업고", "충남대"]
+        },
+        {
+            "id" : "kim8",
+            "name" : "김강녕",
+            "birth" : "1986-05-14",
+            "height" : 175,
+            "weight" : 70,
+            "register" : 2019,
+            "school" : ["남성중", "남성고", "조선대"]
+        },
+        {
+            "id" : "lee12",
+            "name" : "이지석",
+            "birth" : "1998-02-05",
+            "height" : 182,
+            "weight" : 80,
+            "register" : 2018,
+            "school" : ["남성중", "남성고", "한양대"]
+        }
+    ]
+}
