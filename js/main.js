@@ -40,3 +40,26 @@ function choosePlayer (playerId, elmnt) {
     document.getElementById(playerId).style.display = "block";
     elmnt.style.backgroundColor = "#f7a520"
 }
+
+// 선수 데이터 json
+function loadData(idx){
+    const url = "/volleyball/common/player_data.txt"
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState === 4 && this.status === 200){
+            const text = JSON.parse(this.responseText);
+            const ply = text[idx]
+            document.getElementById('ply_desc_name').textContent = ply.name;
+            document.getElementById('ply_desc_position').textContent = ply.position;
+            document.getElementById('ply_desc_birth').textContent = ply.birth;
+            document.getElementById('ply_desc_reg').textContent = ply.register + "년";
+            document.getElementById('ply_desc_school').textContent = ply.school;
+            document.getElementById('ply_desc_body').textContent = ply.height + "cm / " + ply.weight + "kg";
+
+        }
+    }
+    xhttp.open("GET", url)
+    xhttp.send();
+}
+
+loadData();

@@ -41,257 +41,54 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
             <section class="player_background">
                 
                 <h2 class="screen_out">선수소개</h2>
+
                 <h3 class="position" id="plyLeft" onclick="choosePosition('left_players',this)">레프트</h3>
                 <ul class="player_list" id="left_players">
-                    <li onclick="choosePlayer('ply_desc_seo1',this)">서재덕</li>
-                    <li onclick="choosePlayer('ply_desc_lim14',this)">임성진</li>
-                    <li onclick="choosePlayer('ply_desc_gong13',this)">공재학</li>
-                    <li onclick="choosePlayer('ply_desc_lee7',this)">이시몬(군입대)</li>
-                    <li onclick="choosePlayer('ply_desc_kang9',this)">강우석</li>
-                    <li class="sixth_player" onclick="choosePlayer('ply_desc_ta4',this)">타이스 덜 호스트</li>
+                    <li onclick="loadData('seo1')">서재덕</li>
+                    <li onclick="loadData('lim14')">임성진</li>
+                    <li onclick="loadData('gong13')">공재학</li>
+                    <li onclick="loadData('lee7')">이시몬(군입대)</li>
+                    <li onclick="loadData('kang9')">강우석</li>
+                    <li class="sixth_player" onclick="loadData('ta4')">타이스 덜 호스트</li>
+                </ul>
+
+                <h3 class="position" id="plyCenter" onclick="choosePosition('center_players',this)">센터</h3>
+                <ul class="player_list"  id="center_players">
+                    <li onclick="loadData('shin20')">신영석</li>
+                    <li onclick="loadData('park18')">박지윤</li> 
+                    <li onclick="loadData('park17')">박찬웅</li>
+                    <li onclick="loadData('cho11')">조근호</li>
+                    <li onclick="loadData('park19')">박태환</li>
+                </ul>
+
+                <h3 class="position" id="plyRight" onclick="choosePosition('right_players',this)">라이트</h3>
+                <ul class="player_list" id="right_players">
+                    <li onclick="loadData('park3')">박철우</li>
+                    <li onclick="loadData('lee10')">이태호(군입대)</li>
+                    <li onclick="loadData('kim16')">김동영(군입대)</li>
+                </ul>
+
+                <h3 class="position" id="plySetter" onclick="choosePosition('setter_players',this)">세터</h3>
+                <ul class="player_list"  id="setter_players">
+                    <li onclick="loadData('kim15')">김광국</li>
+                    <li onclick="loadData('lee2')">이민욱</li>
+                </ul>
+
+                <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players',this)">리베로</h3>
+                <ul class="player_list" id="libero_players">
+                    <li onclick="loadData('kum4')">금태용(군입대)</li>
+                    <li onclick="loadData('kim8')">김강녕</li>
+                    <li onclick="loadData('lee12')">이지석</li>
                 </ul>
 
                 <div class="ply_desc" id="ply_desc_seo1">
                     <dl>
-                        <dt>서재덕</dt>
-                        <dd>레프트</dd>
-                        <dd>1989년 7월 21일</dd>
-                        <dd>194cm / 94kg</dd>
-                        <dd>2011년</dd>
-                        <dd>문흥중-전자공고-성균관대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_lim14">
-                    <dl>
-                        <dt>임성진</dt>
-                        <dd>레프트</dd>
-                        <dd>1999년 1월 11일</dd>
-                        <dd>195cm / 85kg</dd>
-                        <dd>2020년</dd>
-                        <dd>제천중-제천산업고-성균관대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_gong13">
-                    <dl>
-                        <dt>공재학</dt>
-                        <dd>레프트</dd>
-                        <dd>1991년 6월 27일</dd>
-                        <dd>194cm / 87kg</dd>
-                        <dd>2017년</dd>
-                        <dd>문흥중-광주전자공고-인하대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_lee7">
-                    <dl>
-                        <dt>이시몬</dt>
-                        <dd>레프트</dd>
-                        <dd>1992년 11월 9일</dd>
-                        <dd>192cm / 86kg</dd>
-                        <dd>2015년</dd>
-                        <dd>홍익대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_kang9">
-                    <dl>
-                        <dt>강우석</dt>
-                        <dd>레프트</dd>
-                        <dd>1999년 1월 16일</dd>
-                        <dd>188cm / 72kg</dd>
-                        <dd>2021년</dd>
-                        <dd>성균관대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_ta4">
-                    <dl>
-                        <dt>타이스</dt>
-                        <dd>레프트</dd>
-                        <dd>1991년 9월 18일</dd>
-                        <dd>204cm / 95kg</dd>
-                        <dd>2022년</dd>
-                        <dd>-</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-
-                <h3 class="position" id="plyCenter" onclick="choosePosition('center_players',this)">센터</h3>
-                <ul class="player_list"  id="center_players">
-                    <li onclick="choosePlayer('ply_desc_shin20',this)">신영석</li>
-                    <li onclick="choosePlayer('ply_desc_park18',this)">박지윤</li> 
-                    <li onclick="choosePlayer('ply_desc_park17',this)">박찬웅</li>
-                    <li onclick="choosePlayer('ply_desc_cho11',this)">조근호</li>
-                    <li onclick="choosePlayer('ply_desc_park19',this)">박태환</li>
-                </ul>
-
-                <div class="ply_desc" id="ply_desc_shin20">
-                    <dl>
-                        <dt>신영석</dt>
-                        <dd>센터</dd>
-                        <dd>1986년 10월 4일</dd>
-                        <dd>200cm / 93kg</dd>
-                        <dd>2008년</dd>
-                        <dd>인장중-인창고-경기대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_park18">
-                    <dl>
-                        <dt>박지윤</dt>
-                        <dd>센터</dd>
-                        <dd>1996년 3월 4일</dd>
-                        <dd>197cm / 92kg</dd>
-                        <dd>2019년</dd>
-                        <dd>남성중-남성고-성균관대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_park17">
-                    <dl>
-                        <dt>박찬웅</dt>
-                        <dd>센터</dd>
-                        <dd>1997년 8월 13일</dd>
-                        <dd>196cm / 78kg</dd>
-                        <dd>2020년</dd>
-                        <dd>연현중-영생고-한양대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_cho11">
-                    <dl>
-                        <dt>조근호</dt>
-                        <dd>센터</dd>
-                        <dd>1990년 5월 23일</dd>
-                        <dd>199cm / 89kg</dd>
-                        <dd>2018년</dd>
-                        <dd>부안중-평촌고-경기대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_park19">
-                    <dl>
-                        <dt>박태환</dt>
-                        <dd>센터</dd>
-                        <dd>1995년 1월 5일</dd>
-                        <dd>196cm / 81kg</dd>
-                        <dd>2018년</dd>
-                        <dd>송림고-한양대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-
-                <h3 class="position" id="plyRight" onclick="choosePosition('right_players',this)">라이트</h3>
-                <ul class="player_list" id="right_players">
-                    <li onclick="choosePlayer('ply_desc_park3',this)">박철우</li>
-                    <li onclick="choosePlayer('ply_desc_lee10',this)">이태호(군입대)</li>
-                    <li onclick="choosePlayer('ply_desc_kim16',this)">김동영(군입대)</li>
-                </ul>
-
-                <div class="ply_desc" id="ply_desc_park3">
-                    <dl>
-                        <dt>박철우</dt>
-                        <dd>라이트</dd>
-                        <dd>1985년 7월 25일</dd>
-                        <dd>199cm / 95kg</dd>
-                        <dd>2004년</dd>
-                        <dd>명지대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_lee10">
-                    <dl>
-                        <dt>이태호</dt>
-                        <dd>라이트</dd>
-                        <dd>2000년 8월 16일</dd>
-                        <dd>203cm / 90kg</dd>
-                        <dd>2018년</dd>
-                        <dd>영생고</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_kim16">
-                    <dl>
-                        <dt>김동영</dt>
-                        <dd>라이트</dd>
-                        <dd>1996년 7월 2일</dd>
-                        <dd>186cm / 79kg</dd>
-                        <dd>2019년</dd>
-                        <dd>함안중-군북고-중부대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-
-                <h3 class="position" id="plySetter" onclick="choosePosition('setter_players',this)">세터</h3>
-                <ul class="player_list"  id="setter_players">
-                    <li onclick="choosePlayer('ply_desc_kim15',this)">김광국</li>
-                    <li onclick="choosePlayer('ply_desc_lee2',this)">이민욱</li>
-                </ul>
-
-                <div class="ply_desc" id="ply_desc_kim15">
-                    <dl>
-                        <dt>김광국</dt>
-                        <dd>세터</dd>
-                        <dd>1987년 8월 13일</dd>
-                        <dd>187cm / 77kg</dd>
-                        <dd>2009년</dd>
-                        <dd>동명중-동명고-성균관대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_lee2">
-                    <dl>
-                        <dt>이민욱</dt>
-                        <dd>세터</dd>
-                        <dd>1995년 2월 10일</dd>
-                        <dd>184cm / 77kg</dd>
-                        <dd>2019년</dd>
-                        <dd>송림중-송림고-경기대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-   
-
-
-                <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players',this)">리베로</h3>
-                <ul class="player_list" id="libero_players">
-                    <li onclick="choosePlayer('ply_desc_kum4',this)">금태용(군입대)</li>
-                    <li onclick="choosePlayer('ply_desc_kim8',this)">김강녕</li>
-                    <li onclick="choosePlayer('ply_desc_lee12',this)">이지석</li>
-                </ul>
-
-                <div class="ply_desc" id="ply_desc_kum4">
-                    <dl>
-                        <dt>금태용</dt>
-                        <dd>리베로</dd>
-                        <dd>1996년 6월 11일</dd>
-                        <dd>187cm / 80kg</dd>
-                        <dd>2018년</dd>
-                        <dd>제천산업고-충남대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_kim8">
-                    <dl>
-                        <dt>김강녕</dt>
-                        <dd>리베로</dd>
-                        <dd>1986년 5월 14일</dd>
-                        <dd>175cm / 70kg</dd>
-                        <dd>2019년</dd>
-                        <dd>남성중-남성고-조선대</dd>
-                        <dd><img src="" alt=""></dd>
-                    </dl>
-                </div>
-                <div class="ply_desc" id="ply_desc_lee12">
-                    <dl>
-                        <dt>이지석</dt>
-                        <dd>리베로</dd>
-                        <dd>1998년 2월 5일</dd>
-                        <dd>182cm / 80kg</dd>
-                        <dd>2018년</dd>
-                        <dd>남성중-남성고-한양대</dd>
+                        <dt id="ply_desc_name">서재덕</dt>
+                        <dd id="ply_desc_position">레프트</dd>
+                        <dd id="ply_desc_birth">1989년 7월 21일</dd>
+                        <dd id="ply_desc_body">194cm / 94kg</dd>
+                        <dd id="ply_desc_reg">2011년</dd>
+                        <dd id="ply_desc_school">문흥중-전자공고-성균관대</dd>
                         <dd><img src="" alt=""></dd>
                     </dl>
                 </div>
