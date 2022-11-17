@@ -100,7 +100,7 @@
     letter-spacing: -2px;
     top:90px;
     left:60px;
-    background:#ffffff;
+    background-color:#ffffff;
     padding:5px;
     width:60px;
     text-align: center;
@@ -121,7 +121,6 @@
 #left_players {
     display: block;
 }
-
 .player_list li {
     float:left;
     margin-right:15px;
@@ -134,21 +133,22 @@
     line-height:12.0;
     font-weight:bold;
     cursor: pointer;
-}
-.plyaer_list li a{
     color:white;
 }
-
+#ply_list_first {
+    background-color:#f7a520;
+}
+.player_list > li:hover {
+    background-color:#f7a520;
+}
 .player_list .sixth_player{
     position:absolute;
     top:100px;
 }
 
-.player_list li:hover {
-    background:#f7a520;
-}
+
 .position:hover{
-    background:#f7a520;
+    background-color:#f7a520;
     color:#ffffff;
 }
 

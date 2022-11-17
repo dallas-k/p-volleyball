@@ -44,51 +44,51 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
                 <h3 class="position" id="plyLeft" onclick="choosePosition('left_players',this)">레프트</h3>
                 <ul class="player_list" id="left_players">
-                    <li onclick="loadData('seo1')">서재덕</li>
-                    <li onclick="loadData('lim14')">임성진</li>
-                    <li onclick="loadData('gong13')">공재학</li>
-                    <li onclick="loadData('lee7')">이시몬(군입대)</li>
-                    <li onclick="loadData('kang9')">강우석</li>
-                    <li class="sixth_player" onclick="loadData('ta4')">타이스 덜 호스트</li>
+                    <li onclick="loadData('seo1',this)" id="ply_list_first">서재덕</li>
+                    <li onclick="loadData('lim14',this)">임성진</li>
+                    <li onclick="loadData('gong13',this)">공재학</li>
+                    <li onclick="loadData('lee7',this)">이시몬(군입대)</li>
+                    <li onclick="loadData('kang9',this)">강우석</li>
+                    <li class="sixth_player" onclick="loadData('ta4',this)">타이스 덜 호스트</li>
                 </ul>
 
                 <h3 class="position" id="plyCenter" onclick="choosePosition('center_players',this)">센터</h3>
                 <ul class="player_list"  id="center_players">
-                    <li onclick="loadData('shin20')">신영석</li>
-                    <li onclick="loadData('park18')">박지윤</li> 
-                    <li onclick="loadData('park17')">박찬웅</li>
-                    <li onclick="loadData('cho11')">조근호</li>
-                    <li onclick="loadData('park19')">박태환</li>
+                    <li onclick="loadData('shin20',this)">신영석</li>
+                    <li onclick="loadData('park18',this)">박지윤</li> 
+                    <li onclick="loadData('park17',this)">박찬웅</li>
+                    <li onclick="loadData('cho11',this)">조근호</li>
+                    <li onclick="loadData('park19',this)">박태환</li>
                 </ul>
 
                 <h3 class="position" id="plyRight" onclick="choosePosition('right_players',this)">라이트</h3>
                 <ul class="player_list" id="right_players">
-                    <li onclick="loadData('park3')">박철우</li>
-                    <li onclick="loadData('lee10')">이태호(군입대)</li>
-                    <li onclick="loadData('kim16')">김동영(군입대)</li>
+                    <li onclick="loadData('park3',this)">박철우</li>
+                    <li onclick="loadData('lee10',this)">이태호(군입대)</li>
+                    <li onclick="loadData('kim16',this)">김동영(군입대)</li>
                 </ul>
 
                 <h3 class="position" id="plySetter" onclick="choosePosition('setter_players',this)">세터</h3>
                 <ul class="player_list"  id="setter_players">
-                    <li onclick="loadData('kim15')">김광국</li>
-                    <li onclick="loadData('lee2')">이민욱</li>
+                    <li onclick="loadData('kim15',this)">김광국</li>
+                    <li onclick="loadData('lee2',this)">이민욱</li>
                 </ul>
 
                 <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players',this)">리베로</h3>
                 <ul class="player_list" id="libero_players">
-                    <li onclick="loadData('kum4')">금태용(군입대)</li>
-                    <li onclick="loadData('kim8')">김강녕</li>
-                    <li onclick="loadData('lee12')">이지석</li>
+                    <li onclick="loadData('kum4',this)">금태용(군입대)</li>
+                    <li onclick="loadData('kim8',this)">김강녕</li>
+                    <li onclick="loadData('lee12',this)">이지석</li>
                 </ul>
 
-                <div class="ply_desc" id="ply_desc_seo1">
+                <div class="ply_desc" id="ply_desc">
                     <dl>
                         <dt id="ply_desc_name">서재덕</dt>
                         <dd id="ply_desc_position">레프트</dd>
-                        <dd id="ply_desc_birth">1989년 7월 21일</dd>
+                        <dd id="ply_desc_birth">1989-07-21</dd>
                         <dd id="ply_desc_body">194cm / 94kg</dd>
                         <dd id="ply_desc_reg">2011년</dd>
-                        <dd id="ply_desc_school">문흥중-전자공고-성균관대</dd>
+                        <dd id="ply_desc_school">문흥중,전자공고,성균관대</dd>
                         <dd><img src="" alt=""></dd>
                     </dl>
                 </div>
