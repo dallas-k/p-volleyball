@@ -312,7 +312,11 @@
         window.open('/volleyball/member/signup/signup.html','signupPopup', 'width=640, height=520, left=200, top=50')
     }
     function myPage() {
+        <?php if($s_id === "admin") {;?>
+        location.href = "/volleyball/admin/index.php";
+        <?php } else {; ?>
         window.open('/volleyball/member/login/mypage.php','Mypage', 'width=640, height=520, left=200, top=50')
+        <?php }; ?>
     }
     function logout() {
         window.open("/volleyball/member/login/logout.php")

@@ -33,7 +33,6 @@ function loadData(idx, elmnt){
         if (this.readyState === 4 && this.status === 200){
             const text = JSON.parse(this.responseText);
             const ply = text[idx];
-            console.log(ply.name);
             document.getElementById('ply_desc_name').textContent = ply.name;
             document.getElementById('ply_desc_position').textContent = ply.position;
             document.getElementById('ply_desc_birth').textContent = ply.birth;

@@ -70,6 +70,9 @@
                 <?php
                 $sql = "SELECT * FROM schedule;";
                 $result = mysqli_query($dbcon, $sql);
+                echo "<style>
+                    table tr td {text-align:center; padding:5px 0; box-sizing:border-box;}
+                </style>";
                 while($array = mysqli_fetch_array($result)){
                     if($array["home_score"] !== NULL){
                         $game_result = $array["home_score"]." : ".$array["away_score"];

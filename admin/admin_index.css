@@ -1,0 +1,34 @@
+/* 초기화 */
+
+body, h1, h2, h3, h4, ul, li, ol, div, a, p, caption, tr, td, th {
+    padding: 0;
+    margin: 0;
+    text-decoration:none;
+}
+body, a {
+    color: black;
+    font-size:13px;
+    line-height:1.5;
+    font-family:"나눔고딕", "바른 고딕" sans-serif;
+}
+dl, ul, ol, li {
+    list-style: none;
+}
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.wrap {
+    min-width:1200px;
+}
+
+
+/* main */
+
+.container {
+    display:flex;
+}

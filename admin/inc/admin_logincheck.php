@@ -1,9 +1,9 @@
 <?php
 
-if($s_idx !== "admin"){
+if($s_id !== "admin"){
     echo "<script>
     alert('잘못된 접근입니다');
-    location.href = '/volleyball/index.html'
+    location.href = '/volleyball/index.php'
     </script>
     ";
 };

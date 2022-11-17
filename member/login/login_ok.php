@@ -39,7 +39,7 @@ if(!$num){
 
 if($_SESSION["s_id"] === "admin"){
     echo "<script>
-    opener.location.href = '../../admin/index.php';
+    opener.location.href = '/volleyball/admin/index.php';
     window.close();
     </script>";
 } else {
