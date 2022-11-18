@@ -218,5 +218,6 @@ $check_news_n = $array["news_subscribe"] === 'N' ? 'checked' : "";
 
         } 
     </script>
+<?php mysqli_close($dbcon);?>
 </body>
 </html>

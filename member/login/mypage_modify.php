@@ -22,7 +22,7 @@ mysqli_close($dbcon);
 echo "<script>
     alert('수정이 완료되었습니다');
     location.href = 'mypage.php';
-</script>"
+</script>";
 
-//echo $u_name." ".$pwd." ".$email." ".$email_subscribe." ".$news_subscribe;
+mysqli_close($dbcon);
 ?>

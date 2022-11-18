@@ -44,8 +44,6 @@ if($_SESSION["s_id"]){
     </script>";
 }
 
-
-
 mysqli_close($dbcon);
 
 ?>

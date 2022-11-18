@@ -92,5 +92,6 @@
         </div>
     </main>
     <footer id="footer" class="footer"></footer>
+<?php mysqli_close($dbcon);?>
 </body>
 </html>
