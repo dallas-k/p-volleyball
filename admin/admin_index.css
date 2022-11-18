@@ -23,7 +23,7 @@ dl, ul, ol, li {
     text-indent: -9999px;
 }
 .wrap {
-    min-width:1200px;
+    min-width:1000px;
 }
 
 
@@ -31,4 +31,17 @@ dl, ul, ol, li {
 
 .container {
     display:flex;
+}
+
+.menu_tab {
+    width:200px;
+    box-sizing: border-box;
+    padding:0 20px;
+    border-right:1px solid gray;
+}
+
+.editor{
+    width:800px;
+    margin:auto;
+    text-align:center;
 }

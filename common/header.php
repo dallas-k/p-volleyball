@@ -134,7 +134,7 @@
     }
 
     .user_menu_innerBox{
-        width:440px;
+        width:460px;
         margin:auto;
         position:absolute;
         height:30px;
@@ -199,10 +199,12 @@
     }
 
     #ico_facebook{
+        <?php if($s_id === "admin") {echo "top:48px;";};?>
         right:32px;
         background: no-repeat url(/volleyball/images/ico_facebook.jpg);
     }
     #ico_naver{
+        <?php if($s_id === "admin") {echo "top:48px;";};?>
         right:-8px;
         background: no-repeat url(/volleyball/images/ico_naver.jpg);
     }
@@ -278,7 +280,11 @@
             <li class='usermenu' id='user_signup'><a onclick="openSignup()">회원가입</a></li>
             <?php } else {?>
             <li class='loginmenu' id='myname'><span><?php echo '\''.$s_name.'\''."님";?></span></li>
+            <?php if($s_id === "admin") { ?>
+            <li class='loginmenu' id='mypage'><a onclick="myPage()">관리자</a></li>
+            <?php } else {; ?>
             <li class='loginmenu' id='mypage'><a onclick="myPage()">마이페이지</a></li>
+            <?php } ?>
             <li class='loginmenu' id='logout'><a onclick="logout()">로그아웃</a></li>
             <?php } ?>
             <li class='top_ico' id='ico_facebook'><a>페이스북</a></li>

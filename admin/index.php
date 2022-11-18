@@ -10,7 +10,16 @@ include "inc/admin_logincheck.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin_index.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>관리자 페이지</title>
+    <script>
+        $(function(){
+        
+        })
+        function adminOpen(page){
+            $(".editor").load(page)
+        }
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -37,7 +46,7 @@ include "inc/admin_logincheck.php";
                         </div>
                         <div>
                             <dt>GAME</dt>
-                            <dd>경기일정, 결과 <span><a>[이동]</a></span></dd>
+                            <dd onclick="adminOpen('pages/game_result.php')">경기결과 입력</dd>
                             <dd>경기기록실 <span><a>[이동]</a></span></dd>
                             <dd>팀종합순위 <span><a>[이동]</a></span></dd>
                             <dd>티켓예매 <span><a>[이동]</a></span></dd>
