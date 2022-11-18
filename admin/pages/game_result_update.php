@@ -17,8 +17,11 @@ $away_score = isset($array["away_score"]) ? $array["away_score"] : "";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form action="back/game_result_update_ok.php" method="GET">
+    <form action="back/game_result_update_ok.php" method="POST">
         <input type="hidden" name="idx" value="<?php echo $idx;?>">
+        <input type="hidden" name="home_team" value="<?php echo $array['home_team'];?>">
+        <input type="hidden" name="away_team" value="<?php echo $array['away_team'];?>">
+        <input type="hidden" name="date" value="<?php echo $array['game_date'];?>">
         <div class='home'>
             <label for=""><?php echo $array["home_team"]?></label>
             <input type="text" name="h_score" value = "<?php echo $home_score;?>">

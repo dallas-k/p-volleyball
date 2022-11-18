@@ -1,0 +1,24 @@
+@import url("pages_tab.css");
+
+.table_box {
+    width:1200px;
+    margin:auto;
+}
+
+.table_box .table_header {
+    box-sizing:border-box;
+    padding:20px;
+    font-size:24px;
+}
+
+table {
+    width:960px;
+    margin:20px auto 60px;
+}
+
+.table_box .table_header #header1 {width:120px;}
+.table_box .table_header #header2 {width:80px;}
+.table_box .table_header #header3 {width:400px;}
+.table_box .table_header #header4 {width:180px;}
+.table_box .table_header #header5 {width:180px;}
+

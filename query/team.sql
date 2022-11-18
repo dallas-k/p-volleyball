@@ -4,7 +4,6 @@ CREATE TABLE team (
     stadium VARCHAR(16) NOT NULL
 );
 
-
 // DATA
 
 INSERT INTO team (team_name, stadium) VALUES('대한항공','인천계양');

@@ -1,0 +1,32 @@
+CREATE TABLE daehan_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE kb_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE woori_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
