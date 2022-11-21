@@ -1,3 +1,9 @@
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/admin_session.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/admin_logincheck.php";
+?>
+
 <dl>
     <div>
         <dt>CLUB</dt>
@@ -25,7 +31,7 @@
         <dd>포토갤러리 <span><a>[이동]</a></span></dd>
         <dd>응원가 <span><a>[이동]</a></span></dd>
         <dd>이벤트 <span><a>[이동]</a></span></dd>
-        <dd>구단 문의사항 <span><a>[이동]</a></span></dd>
+        <dd><a href="/volleyball/admin/pages/qna.php">구단 문의사항</a></dd>
     </div>
     <div>
         <dt>NEWS</dt>

@@ -95,11 +95,14 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
 
                     $result = mysqli_query($dbcon, $sql);
                     $i = $num - (($page - 1) * $article_per_page);
-                    while($array = mysqli_fetch_array($result)){ ?>
+                    while($array = mysqli_fetch_array($result)){
+                        $title = $array["secret"] === 'N' ? $array["title"] : "비밀글입니다";    
+                        $name = $array["secret"] === 'N' ? $array["u_name"] : "***";    
+                    ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><a href="board/article.php?idx=<?php echo $array['idx']?>"><?php echo $array["title"]; ?></a></td>
-                        <td><?php echo $array["u_name"]; ?></td>
+                        <td><a href="board/article.php?idx=<?php echo $array['idx']?>"><?php echo $title; ?></a></td>
+                        <td><?php echo $name ?></td>
                         <td><?php echo substr($array["sign_date"],0,10); ?></td>
                         <td><?php echo $array["click"]; ?></td>
                     </tr>

@@ -1,5 +1,3 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/connect.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/volleyball/admin/style.css">
     <style>
+        #link {color: blue; cursor:pointer;}
+
         .table_
         .table_box .table_header #header1 {width:120px;}
         .table_box .table_header #header2 {width:80px;}
@@ -24,11 +24,13 @@
     <div class="wrap">
         <header>
             <h1>관리자 페이지 입니다.</h1>
+            <a id='link' href="/volleyball/admin/index.php">[관리자 홈]</a>
+            <a id='link' href="/volleyball/index.php">[사용자 페이지]</a>
         </header>
         <main>
             <div class="container">
                 <div class="menu_tab">
-                    <?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/header.html"; ?>
+                    <?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/admin/inc/header.php"; ?>
                 </div>
                 <div class="editor">
                     <div class="table_box">
