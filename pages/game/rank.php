@@ -1,4 +1,26 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php"; ?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+function arr_sort($array, $key, $sort='asc') //정렬대상 array, 정렬 기준 key, 오름/내림차순
+    {   
+        $keys = array();
+        $vals = array();
+        foreach ($array as $k=>$v)
+            {
+                $i = $v[$key].'.'.$k;
+                $vals[$i] = $v;
+                array_push($keys, $k);
+            }
+        unset($array);
+         if ($sort=='asc') {
+            ksort($vals);
+        } else {
+            krsort($vals);
+        }
+        $ret = array_combine($keys, $vals);
+        unset($keys);
+        unset($vals);
+        return $ret;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -68,26 +90,43 @@
                 </tr>
 
                 <?php
-                $sql = "SELECT * FROM schedule;";
-                $result = mysqli_query($dbcon, $sql);
-                echo "<style>
-                    table tr td {text-align:center; padding:5px 0; box-sizing:border-box;}
-                </style>";
-                while($array = mysqli_fetch_array($result)){
-                    if($array["home_score"] !== NULL){
-                        $game_result = $array["home_score"]." : ".$array["away_score"];
-                    } else {
-                        $game_result = " vs ";
-                    };
+                $sql_daehan = "SELECT '대한항공', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM daehan_result;";
+                $sql_hanjun = "SELECT '한국전력', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hanjun_result;";
+                $sql_hyundai = "SELECT '현대캐피탈', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hyundai_result;";
+                $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM kb_result;";
+                $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM ok_result;";
+                $sql_samsung = "SELECT '삼성화재', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM samsung_result;";
+                $sql_woori = "SELECT '우리카드', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM woori_result;";
+                
+                $points = array(
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
+                );
+                $sql_array = [$sql_daehan, $sql_hanjun, $sql_hyundai, $sql_kb, $sql_ok, $sql_samsung, $sql_woori];
+
+                for($i = 0; $i < count($sql_array); $i++){
+                    $sum = mysqli_query($dbcon, $sql_array[$i]);
+                    $fetch = mysqli_fetch_row($sum);
+                    for($k = 0; $k < 6; $k++){
+                        $points[$i][$k] = $fetch[$k];
+                    }
+                }
+                $points_desc = arr_sort($points, 'team', 'desc');
+                print_r($points_desc);
                 ?>
                 <tr>
-                    <td><?php echo substr($array["game_date"],0,10);?></td>
-                    <td><?php echo substr($array["game_date"],11,5);?></td>
-                    <td><?php echo $array["home_team"]." ".$game_result." ".$array["away_team"];?></td>
-                    <td><?php echo $array["stadium"];?></td>
-                    <td><?php echo $array["round"]."라운드"?></td>
+                    <td><?php echo $j."위"?></td>
+                    <td></td>
+                    <td>경기수</td>
+                    <td>승</td>
+                    <td>패</td>
+                    <td>승점</td>
                 </tr>
-                <?php } ?>
             </table>
         </div>
     </main>
