@@ -51,19 +51,6 @@ if(!$s_idx){
         <div class="title">
             <h2>FAN</h2>
         </div>
-        <div class="menu_tab_square">
-            <div class="menu_tab_box">
-                <section class="menu_tab">
-                    <h3>첫화면</h3>
-                    <ul>
-                        <li class="selected_tab">FAN</li>
-                    </ul>
-                    <ul>
-                        <li>구단 문의</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
 
         <div class="query">
             <h3>구단 문의사항</h3>

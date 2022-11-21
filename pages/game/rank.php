@@ -47,34 +47,7 @@ function arr_sort($array, $key, $sort='asc') //정렬대상 array, 정렬 기준
         <div class="title">
             <h2>GAME</h2>
         </div>
-        <div class="menu_tab_square">
-            <div class="menu_tab_box">
-                <section class="menu_tab">
-                    <div class='box_blank'></div>
-                    <h3><a href="/volleyball/index.php">첫화면</a></h3>
-                    <ul class="menu_box" id="box1">
-                    <li>GAME</li>
-                        <div class="not_selected">
-                            <li><a href="/volleyball/pages/club/history.html">CLUB</a></li>
-                            <li><a href="/volleyball/pages/team/player.html">TEAM</a></li>
-                            <li><a href="/volleyball/pages/game/calendar.php">GAME</a></li>
-                            <li><a href="/volleyball/pages/news/news.php">NEWS</a></li>
-                            <li><a href="/volleyball/pages/fan/qna.php">FAN</a></li>
-                        </div>
-                    </ul>
-                    <ul class="menu_box" id="box2">
-                        <li>팀 종합순위</li>
-                        <div class="not_selected">
-                            <li><a href="/volleyball/pages/news/calendar.php">경기일정, 결과</a></li>
-                            <li><a href="/volleyball/pages/news/noticement.html">경기기록실</a></li>
-                            <li><a href="/volleyball/pages/news/rank.php">팀 종합순위</a></li>
-                            <li><a href="/volleyball/pages/news/noticement.html">티켓예매</a></li>
-                        </div>
-                    </ul>
-                </section>
-            </div>
-        </div>
-
+   
         <div class="query">
             <h3>팀 종합순위</h3>
         </div>

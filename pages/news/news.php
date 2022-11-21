@@ -62,32 +62,6 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
             <div class="title">
                 <h2>NEWS</h2>
             </div>
-            <div class="menu_tab_square">
-                <div class="menu_tab_box">
-                    <section class="menu_tab">
-                        <div class='box_blank'></div>
-                        <h3><a href="/volleyball/index.php">첫화면</a></h3>
-                        <ul class="menu_box" id="box1">
-                            <li>NEWS</li>
-                            <div class="not_selected">
-                                <li><a href="/volleyball/pages/club/history.html">CLUB</a></li>
-                                <li><a href="/volleyball/pages/team/player.html">TEAM</a></li>
-                                <li><a href="/volleyball/pages/game/calendar.php">GAME</a></li>
-                                <li><a href="/volleyball/pages/news/news.php">NEWS</a></li>
-                                <li><a href="/volleyball/pages/fan/qna.php">FAN</a></li>
-                            </div>
-                        </ul>
-                        <ul class="menu_box" id="box2">
-                        <li>FAN</li>
-                            <div class="not_selected">
-                                <li><a href="/volleyball/pages/news/news.php">뉴스</a></li>
-                                <li><a href="/volleyball/pages/news/noticement.html">공지사항</a></li>
-                            </div>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-
             <div class="query">
                 <h3>NEWS</h3>
             </div>
