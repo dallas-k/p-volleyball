@@ -59,52 +59,54 @@ function arr_sort($array, $key, $sort='asc') //정렬대상 array, 정렬 기준
                     <th class='table_header' id='header3'>경기수</th>
                     <th class='table_header' id='header4'>승</th>
                     <th class='table_header' id='header5'>패</th>
-                    <th class='table_header' id='header6'>승점</th>
+                    <th class='table_header' id='header6'>세트 승</th>
+                    <th class='table_header' id='header7'>세트 패</th>
+                    <th class='table_header' id='header8'>승점</th>
                 </tr>
 
                 <?php
                 $sql_daehan = "SELECT '대한항공', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM daehan_result;";
                 $sql_hanjun = "SELECT '한국전력', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hanjun_result;";
                 $sql_hyundai = "SELECT '현대캐피탈', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hyundai_result;";
-                $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM kb_result;";
-                $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM ok_result;";
                 $sql_samsung = "SELECT '삼성화재', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM samsung_result;";
+                $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM kb_result;";
                 $sql_woori = "SELECT '우리카드', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM woori_result;";
+                $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM ok_result;";
                 
-                $points = array(
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                    array('team' => "", 'win' => 0, 'lose' => 0, 'my_set' => 0, 'enemy_set' => 0, "point" => 0),
-                );
+                $points = array();
+                $sum_sql = array();
                 $sql_array = [$sql_daehan, $sql_hanjun, $sql_hyundai, $sql_kb, $sql_ok, $sql_samsung, $sql_woori];
 
                 for($i = 0; $i < count($sql_array); $i++){
                     $sum = mysqli_query($dbcon, $sql_array[$i]);
                     $fetch = mysqli_fetch_row($sum);
-                    for($k = 0; $k < 6; $k++){
-                        $points[$i][$k] = $fetch[$k];
-                    }
+                    $points[$fetch[0]] = $fetch[5];
+                    $sum_sql[$i] = array($fetch[0],$fetch[1],$fetch[2],$fetch[3],$fetch[4],$fetch[5]);
                 }
-                $points_desc = arr_sort($points, 'team', 'desc');
-                print_r($points_desc);
+                arsort($points);
+                $points_desc = array_keys($points);
+                for($i = 0; $i < 7; $i++){
+                    for($j = 0; $j < 7; $j++){
+                        if($points_desc[$i] == $sum_sql[$j][0]){
                 ?>
                 <tr>
-                    <td><?php echo $j."위"?></td>
-                    <td></td>
-                    <td>경기수</td>
-                    <td>승</td>
-                    <td>패</td>
-                    <td>승점</td>
+                    <td><?php echo $i+1; ?></td>
+                    <td><?php echo $sum_sql[$j][0]?></td>
+                    <td><?php echo $sum_sql[$j][1]+$sum_sql[$j][2];?></td>
+                    <td><?php echo $sum_sql[$j][1]?></td>
+                    <td><?php echo $sum_sql[$j][2]?></td>
+                    <td><?php echo $sum_sql[$j][3]?></td>
+                    <td><?php echo $sum_sql[$j][4]?></td>
+                    <td><?php echo $sum_sql[$j][5]?></td>
                 </tr>
+                <?php 
+                    session_start();
+                    $_SESSION["rank"] = $sum_sql[$j];
+                }}} ?>
             </table>
         </div>
     </main>
     <footer id="footer" class="footer"></footer>
     <?php mysqli_close($dbcon);?>
-    <footer id="footer" class="footer"></footer>
 </body>
 </html>

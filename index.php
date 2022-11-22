@@ -1,6 +1,5 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -152,6 +151,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                             <td>56점</td>
                         </tr>
                     </table>
+                    
 
                     <a class="table_more" href="/volleyball/pages/game/rank.html">더보기</a>
                 </section>
