@@ -85,6 +85,7 @@ function arr_sort($array, $key, $sort='asc') //정렬대상 array, 정렬 기준
                 }
                 arsort($points);
                 $points_desc = array_keys($points);
+                $s_array = array();
                 for($i = 0; $i < 7; $i++){
                     for($j = 0; $j < 7; $j++){
                         if($points_desc[$i] == $sum_sql[$j][0]){
@@ -100,9 +101,10 @@ function arr_sort($array, $key, $sort='asc') //정렬대상 array, 정렬 기준
                     <td><?php echo $sum_sql[$j][5]?></td>
                 </tr>
                 <?php 
-                    session_start();
-                    $_SESSION["rank"] = $sum_sql[$j];
-                }}} ?>
+                    $s_array[$i] = $sum_sql[$j];
+                }}}
+                session_start();
+                $_SESSION['rank'] = $s_array; ?>
             </table>
         </div>
     </main>

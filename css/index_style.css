@@ -26,16 +26,17 @@
 }
 .match_day {
     position:absolute;
-    top:50px;
-    left:88px;
+    top:54px;
+    left:80px;
     font-weight: bold;
     color:red;
-    font-size:24px;
+    font-size:16px;
 }
 .match_location {
     position:absolute;
-    top:95px;
-    left:100px;
+    top:84px;
+    left:92px;
+    font-size:20px;
 }
 
 .match_hanjun{
@@ -114,7 +115,7 @@
     height:160px;
     top:160px;
     left:70px;
-    width:400px;
+    width:440px;
     display:none;
 }
 
@@ -127,14 +128,74 @@
     width:64px;
     height:64px;
     border-radius: 50%;
-    background-color:#ffffff;
     box-sizing: border-box;
     text-indent:10px;
     line-height:12.0;
     font-weight:bold;
     cursor: pointer;
     color:white;
+    position:relative;
+    z-index:5;
 }
+.player_list li:hover{
+    width:80px;
+    height:80px;
+    line-height:10.0;
+    font-size:18px;
+    color:black;
+}
+
+#seo1 {background:url(/volleyball/images/player_circle/01.jpg) no-repeat 40%;
+    background-size: cover;}
+#lim9 {background:url(/volleyball/images/player_circle/09.jpg) no-repeat 40%;
+    background-size: cover;}
+#gong13 {background:url(/volleyball/images/player_circle/13.jpg) no-repeat 50%;
+    background-size: cover;}
+#lee7 {background:url(/volleyball/images/player_circle/army07.jpg) no-repeat 30%;
+    background-size: cover;}
+#kang14 {background:url(/volleyball/images/player_circle/14.jpg) no-repeat 40%;
+    background-size: cover;}
+#ta4 {background:url(/volleyball/images/player_circle/04.jpg) no-repeat 40%;
+    background-size: cover;}
+#koo5 {background:url(/volleyball/images/player_circle/05.jpg) no-repeat 50%;
+    background-size: cover;}
+#shin22 {background:url(/volleyball/images/player_circle/22.jpg) no-repeat 30%;
+    background-size: cover;}
+#park18 {background:url(/volleyball/images/player_circle/18.jpg) no-repeat 40%;
+    background-size: cover;}
+#park17 {background:url(/volleyball/images/player_circle/17.jpg) no-repeat 40%;
+    background-size: cover;}
+#ahn16 {background:url(/volleyball/images/player_circle/16.jpg) no-repeat 30%;
+    background-size: cover;}
+#park19 {background:url(/volleyball/images/player_circle/army19.jpg) no-repeat 30%;
+    background-size: cover;}
+#jung20 {background:url(/volleyball/images/player_circle/20.jpg) no-repeat 40%;
+    background-size: cover;}
+#park3 {background:url(/volleyball/images/player_circle/03.jpg) no-repeat 40%;
+    background-size: cover;}
+#lee10 {background:url(/volleyball/images/player_circle/army10.jpg) no-repeat 30%;
+    background-size: cover;}
+#kim16 {background:url(/volleyball/images/player_circle/army16.jpg) no-repeat 30%;
+    background-size: cover;}
+#woo19 {background:url(/volleyball/images/player_circle/19.jpg) no-repeat 40%;
+    background-size: cover;}
+#kim15 {background:url(/volleyball/images/player_circle/15.jpg) no-repeat 30%;
+    background-size: cover;}
+#kim2 {background:url(/volleyball/images/player_circle/02.jpg) no-repeat 40%;
+    background-size: cover;}
+#ha6 {background:url(/volleyball/images/player_circle/06.jpg) no-repeat 40%;
+    background-size: cover;}
+#kum4 {background:url(/volleyball/images/player_circle/army04.jpg) no-repeat 30%;
+    background-size: cover;}
+#kim8 {background:url(/volleyball/images/player_circle/08.jpg) no-repeat 40%;
+    background-size: cover;}
+#lee12 {background:url(/volleyball/images/player_circle/12.jpg) no-repeat 40%;
+    background-size: cover;}
+#jang10 {background:url(/volleyball/images/player_circle/10.jpg) no-repeat 40%;
+    background-size: cover;}
+#cho11 {background:url(/volleyball/images/player_circle/11.jpg) no-repeat 40%;
+    background-size: cover;}
+
 #ply_list_first {
     background-color:#f7a520;
 }
@@ -145,7 +206,6 @@
     position:absolute;
     top:100px;
 }
-
 
 .position:hover{
     background-color:#f7a520;
@@ -182,6 +242,7 @@
 }
 
 .ply_desc dd {
+    width:200px;
     padding:3px;
     margin:8px 0;
     font-size:18px;

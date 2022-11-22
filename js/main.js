@@ -50,3 +50,13 @@ function loadData(idx, elmnt){
     }    
     elmnt.style.backgroundColor = "rgb(247,165,32)";
 }
+
+// team_rank_table
+// let my_team = document.getElementsByClassName("my_team");
+// console.log(my_team);
+// for(let i = 0; i < my_team.length; i++){
+//     console.log(my_team[i].textContent);
+//     // if(my_team[i].textContent === '한국전력'){
+//     //     // my_team[i].classList += 'table_myteam';
+//     // }
+// }

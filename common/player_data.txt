@@ -10,7 +10,7 @@
             "school" : ["문흥중", "전자공고", "성균관대"]
         },
     
-    "lim14" :
+    "lim9" :
         {
             "name" : "임성진",
             "position" : "레프트",
@@ -43,14 +43,14 @@
             "school" : ["홍익대"]
         },
 
-    "kang9" :
+    "kang14" :
         {
             "name" : "강우석",
             "position" : "레프트",
             "birth" : "1999-01-16",
             "height" : 188,
             "weight" : 72,
-            "register" : 2011,
+            "register" : 2021,
             "school" : ["성균관대"]
         },
 
@@ -65,7 +65,18 @@
             "school" : []
         },
 
-    "shin20" :
+    "koo5" :
+        {
+            "name" : "구교혁",
+            "position" : "레프트",
+            "birth" : "2000-11-09",
+            "height" : 192,
+            "weight" : 84,
+            "register" : 2022,
+            "school" : ["도곡초","소사중","송림고","중부대"]
+        },
+
+    "shin22" :
         {
             "name" : "신영석",
             "position" : "센터",
@@ -120,6 +131,28 @@
             "school" : ["송림고", "한양대"]
         },
 
+    "ahn16" : 
+        {
+            "name" : "안우재",
+            "position" : "센터",
+            "birth" : "1994-12-19",
+            "height" : 197,
+            "weight" : 91,
+            "register" : 2015,
+            "school" : ["송림고", "경기대"]
+        },
+
+    "jung20" : 
+        {
+            "name" : "정성환",
+            "position" : "센터",
+            "birth" : "1996-02-23",
+            "height" : 196,
+            "weight" : 86,
+            "register" : 2022,
+            "school" : ["진주동명중", "진주동명고","경기대"]
+        },
+
     "park3" : 
         {
             "name" : "박철우",
@@ -152,6 +185,17 @@
             "register" : 2019,
             "school" : ["함안중", "군북고", "중부대"]
         },
+
+    "woo19" : 
+        {
+            "name" : "우병헌",
+            "position" : "라이트",
+            "birth" : "2000-03-20",
+            "height" : 184,
+            "weight" : 81,
+            "register" : 2019,
+            "school" : ["울산동백초", "경북사대부중", "경북사대부고","한양대"]
+        },
     
     "kim15" : 
         {
@@ -164,7 +208,7 @@
             "school" : ["동명중", "동명고", "성균관대"]
         },
 
-    "lee2" : 
+    "lee7" : 
         {
             "name" : "이민욱",
             "position" : "세터",
@@ -174,6 +218,29 @@
             "register" : 2019,
             "school" : ["송림중", "송림고", "경기대"]
         },
+
+    "kim2" : 
+        {
+            "name" : "김주영",
+            "position" : "세터",
+            "birth" : "2004-08-10",
+            "height" : 192,
+            "weight" : 80,
+            "register" : 2022,
+            "school" : ["대석초", "팔마중", "순천제일고"]
+        },
+
+    "ha6" : 
+        {
+            "name" : "하승우",
+            "position" : "세터",
+            "birth" : "1995-06-02",
+            "height" : 185,
+            "weight" : 81,
+            "register" : 2022,
+            "school" : ["하양초", "현일중", "현일고", "중부대"]
+        },
+
 
     "kum4" : 
         {
@@ -206,5 +273,16 @@
             "weight" : 80,
             "register" : 2018,
             "school" : ["남성중", "남성고", "한양대"]
+        },
+
+    "jang10" : 
+        {
+            "name" : "장지원",
+            "position" : "리베로",
+            "birth" : "2001-03-17",
+            "height" : 180,
+            "weight" : 75,
+            "register" : 2022,
+            "school" : ["남원중앙초", "남성중", "남성고"]
         }
 }

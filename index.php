@@ -1,5 +1,6 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +28,16 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
             <div class="banner">
                 <img class="banner_image" src="images/banner_image.jpg" alt="">
 
+                <?php
+                $sql = "SELECT * FROM schedule WHERE home_score IS NULL AND (home_team = '한국전력' OR away_team = '한국전력') LIMIT 1;";
+                $result = mysqli_query($dbcon, $sql);
+                $array = mysqli_fetch_array($result);
+                ?>
                 <section class="next_match">
                     <h2 class="screen_out">다음 경기 안내</h2>
-                    <p class="match_day"><span class="screen_out">경기일</span> 2022.09.15</p>
-                    <p class="match_location"><span class="screen_out">경기장소</span> 수원실내체육관</p>
-                    <p><span class="match_hanjun">한국전력</span> <span class="versus">대</span> <span class="match_woori">우리카드</span></p>
+                    <p class="match_day"><span class="screen_out">경기일</span><?php echo substr($array['game_date'],0,16);?></p>
+                    <p class="match_location"><span class="screen_out">경기장소</span> <?php echo $array['stadium'];?></p>
+                    <p><span class="match_hanjun"><?php echo $array['home_team'];?></span> <span class="versus">대</span> <span class="match_woori"><?php echo $array['away_team'];?></span></p>
                     <a href="#" class="reserve_ticket">티켓 예매하기</a>
                 </section>
             </div>
@@ -43,41 +49,56 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
 
                 <h3 class="position" id="plyLeft" onclick="choosePosition('left_players',this)">레프트</h3>
                 <ul class="player_list" id="left_players">
-                    <li onclick="loadData('seo1',this)" id="ply_list_first">서재덕</li>
-                    <li onclick="loadData('lim14',this)">임성진</li>
-                    <li onclick="loadData('gong13',this)">공재학</li>
-                    <li onclick="loadData('lee7',this)">이시몬(군입대)</li>
-                    <li onclick="loadData('kang9',this)">강우석</li>
-                    <li class="sixth_player" onclick="loadData('ta4',this)">타이스 덜 호스트</li>
+                    <li id="seo1" onclick="loadData('seo1',this)" id="ply_list_first">서재덕</li>
+                    <li id="gong13" onclick="loadData('gong13',this)">공재학</li>
+                    <li id="koo5" onclick="loadData('koo5',this)">구교혁</li>
+                    <li id="lim9" onclick="loadData('lim9',this)">임성진</li>
+                    <li id="kang14" onclick="loadData('kang14',this)">강우석</li>
+                    <li id="ta4" class="sixth_player" onclick="loadData('ta4',this)">타이스</li>
                 </ul>
 
                 <h3 class="position" id="plyCenter" onclick="choosePosition('center_players',this)">센터</h3>
                 <ul class="player_list"  id="center_players">
-                    <li onclick="loadData('shin20',this)">신영석</li>
-                    <li onclick="loadData('park18',this)">박지윤</li> 
-                    <li onclick="loadData('park17',this)">박찬웅</li>
-                    <li onclick="loadData('cho11',this)">조근호</li>
-                    <li onclick="loadData('park19',this)">박태환</li>
+                    <li id='shin22' onclick="loadData('shin22',this)">신영석</li>
+                    <li id='park18' onclick="loadData('park18',this)">박지윤</li> 
+                    <li id='park17' onclick="loadData('park17',this)">박찬웅</li>
+                    <li id='ahn16' onclick="loadData('ahn16',this)">안우재</li>
+                    <li id='cho11' onclick="loadData('cho11',this)">조근호</li>
+                    <li id='jung20' class="sixth_player" onclick="loadData('jung20',this)">정성환</li>
                 </ul>
 
                 <h3 class="position" id="plyRight" onclick="choosePosition('right_players',this)">라이트</h3>
                 <ul class="player_list" id="right_players">
-                    <li onclick="loadData('park3',this)">박철우</li>
-                    <li onclick="loadData('lee10',this)">이태호(군입대)</li>
-                    <li onclick="loadData('kim16',this)">김동영(군입대)</li>
+                    <li id='park3' onclick="loadData('park3',this)">박철우</li>
+                    <li id='woo19' onclick="loadData('woo19',this)">우병헌</li>
                 </ul>
 
                 <h3 class="position" id="plySetter" onclick="choosePosition('setter_players',this)">세터</h3>
                 <ul class="player_list"  id="setter_players">
-                    <li onclick="loadData('kim15',this)">김광국</li>
-                    <li onclick="loadData('lee2',this)">이민욱</li>
+                    <li id='kim15' onclick="loadData('kim15',this)">김광국</li>
+                    <li id='lee7' onclick="loadData('lee7',this)">이민욱</li>
+                    <li id='kim2' onclick="loadData('kim2',this)">김주영</li>
+                    <li id='ha6' onclick="loadData('ha6',this)">하승우</li>
                 </ul>
 
                 <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players',this)">리베로</h3>
                 <ul class="player_list" id="libero_players">
-                    <li onclick="loadData('kum4',this)">금태용(군입대)</li>
-                    <li onclick="loadData('kim8',this)">김강녕</li>
-                    <li onclick="loadData('lee12',this)">이지석</li>
+                    <li id='kim8' onclick="loadData('kim8',this)">김강녕</li>
+                    <li id='lee12' onclick="loadData('lee12',this)">이지석</li>
+                    <li id='jang10' onclick="loadData('jang10',this)">장지원</li>
+                </ul>
+
+                <h3 class="position" id="plyArmy" onclick="choosePosition('army_players',this)">군입대</h3>
+                <ul class="player_list" id="army_players">
+                    <li id='kum4' onclick="loadData('kum4',this)">금태용</li>
+                    <li id='park19' onclick="loadData('park19',this)">박태환</li>
+                    <li id='lee7' onclick="loadData('lee7',this)">이시몬</li>
+                    <li id='kim16' onclick="loadData('kim16',this)">김동영</li>
+                    <li id='lee10' onclick="loadData('lee10',this)">이태호</li>
+
+
+
+
                 </ul>
 
                 <div class="ply_desc" id="ply_desc">
@@ -93,7 +114,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                 </div>
 
             </section>
-
             <div class="team_rank">            
                 <!-- <section>
                     <h2 class="screen_out">다음 경기 안내</h2>
@@ -107,7 +127,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     <h3 class="screen_out">팀 순위</h3>
 
                     <table>
-                        <caption>현재 순위 4위</caption>
+                        <caption>현재 순위 <span>3</span>위</caption>
 
                         <tr class="table_th">
                             <th>순위</th>
@@ -117,39 +137,19 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                             <th>패</th>
                             <th>승점</th>
                         </tr>
-
+                        <?php
+                        
+                        for($i = 0; $i < 4; $i++){
+                        ?>
                         <tr>
-                            <td>1위</td>
-                            <td>대한항공</td>
-                            <td>36경기</td>
-                            <td>24승</td>
-                            <td>12패</td>
-                            <td>70점</td>
+                            <td><?php echo $i+1?>위</td>
+                            <td><?php echo $rank[$i][0];?></td>
+                            <td><?php echo $rank[$i][1]+$rank[$i][2];?>경기</td>
+                            <td><?php echo $rank[$i][1];?>승</td>
+                            <td><?php echo $rank[$i][2];?>패</td>
+                            <td><?php echo $rank[$i][5];?>점</td>
                         </tr>
-                        <tr>
-                            <td>2위</td>
-                            <td>KB손해보험</td>
-                            <td>36경기</td>
-                            <td>19승</td>
-                            <td>17패</td>
-                            <td>70점</td>
-                        </tr>
-                        <tr>
-                            <td>3위</td>
-                            <td>우리카드</td>
-                            <td>36경기</td>
-                            <td>17승</td>
-                            <td>19패</td>
-                            <td>59점</td>
-                        </tr>
-                        <tr class="table_myteam">
-                            <td>4위</td>
-                            <td>한국전력</td>
-                            <td>36경기</td>
-                            <td>20승</td>
-                            <td>16패</td>
-                            <td>56점</td>
-                        </tr>
+                        <?php }?>
                     </table>
                     
 
