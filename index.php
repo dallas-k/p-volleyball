@@ -90,15 +90,11 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 
                 <h3 class="position" id="plyArmy" onclick="choosePosition('army_players',this)">군입대</h3>
                 <ul class="player_list" id="army_players">
-                    <li id='kum4' onclick="loadData('kum4',this)">금태용</li>
-                    <li id='park19' onclick="loadData('park19',this)">박태환</li>
-                    <li id='lee7' onclick="loadData('lee7',this)">이시몬</li>
-                    <li id='kim16' onclick="loadData('kim16',this)">김동영</li>
-                    <li id='lee10' onclick="loadData('lee10',this)">이태호</li>
-
-
-
-
+                    <li id='army4' onclick="loadData('army4',this)">금태용</li>
+                    <li id='army19' onclick="loadData('army19',this)">박태환</li>
+                    <li id='army7' onclick="loadData('army7',this)">이시몬</li>
+                    <li id='army16' onclick="loadData('army16',this)">김동영</li>
+                    <li id='army10' onclick="loadData('army10',this)">이태호</li>
                 </ul>
 
                 <div class="ply_desc" id="ply_desc">
@@ -109,7 +105,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
                         <dd id="ply_desc_body">194cm / 94kg</dd>
                         <dd id="ply_desc_reg">2011년</dd>
                         <dd id="ply_desc_school">문흥중,전자공고,성균관대</dd>
-                        <dd><img src="" alt=""></dd>
+                        <dd id="ply_desc_image"><img src="/volleyball/images/player_fullshot/seo1.png" alt=""></dd>
                     </dl>
                 </div>
 

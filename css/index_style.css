@@ -151,7 +151,7 @@
     background-size: cover;}
 #gong13 {background:url(/volleyball/images/player_circle/13.jpg) no-repeat 50%;
     background-size: cover;}
-#lee7 {background:url(/volleyball/images/player_circle/army07.jpg) no-repeat 30%;
+#army7 {background:url(/volleyball/images/player_circle/army07.jpg) no-repeat 30%;
     background-size: cover;}
 #kang14 {background:url(/volleyball/images/player_circle/14.jpg) no-repeat 40%;
     background-size: cover;}
@@ -167,15 +167,15 @@
     background-size: cover;}
 #ahn16 {background:url(/volleyball/images/player_circle/16.jpg) no-repeat 30%;
     background-size: cover;}
-#park19 {background:url(/volleyball/images/player_circle/army19.jpg) no-repeat 30%;
+#army19 {background:url(/volleyball/images/player_circle/army19.jpg) no-repeat 30%;
     background-size: cover;}
 #jung20 {background:url(/volleyball/images/player_circle/20.jpg) no-repeat 40%;
     background-size: cover;}
 #park3 {background:url(/volleyball/images/player_circle/03.jpg) no-repeat 40%;
     background-size: cover;}
-#lee10 {background:url(/volleyball/images/player_circle/army10.jpg) no-repeat 30%;
+#army10 {background:url(/volleyball/images/player_circle/army10.jpg) no-repeat 30%;
     background-size: cover;}
-#kim16 {background:url(/volleyball/images/player_circle/army16.jpg) no-repeat 30%;
+#army16 {background:url(/volleyball/images/player_circle/army16.jpg) no-repeat 30%;
     background-size: cover;}
 #woo19 {background:url(/volleyball/images/player_circle/19.jpg) no-repeat 40%;
     background-size: cover;}
@@ -185,7 +185,7 @@
     background-size: cover;}
 #ha6 {background:url(/volleyball/images/player_circle/06.jpg) no-repeat 40%;
     background-size: cover;}
-#kum4 {background:url(/volleyball/images/player_circle/army04.jpg) no-repeat 30%;
+#army4 {background:url(/volleyball/images/player_circle/army04.jpg) no-repeat 30%;
     background-size: cover;}
 #kim8 {background:url(/volleyball/images/player_circle/08.jpg) no-repeat 40%;
     background-size: cover;}
@@ -194,6 +194,8 @@
 #jang10 {background:url(/volleyball/images/player_circle/10.jpg) no-repeat 40%;
     background-size: cover;}
 #cho11 {background:url(/volleyball/images/player_circle/11.jpg) no-repeat 40%;
+    background-size: cover;}
+#lee7 {background:url(/volleyball/images/player_circle/07.jpg) no-repeat 40%;
     background-size: cover;}
 
 #ply_list_first {
@@ -247,7 +249,21 @@
     margin:8px 0;
     font-size:18px;
 }
+#ply_desc_image {
+    position:absolute;
+    z-index:5;
+    left:-400px;
+    top:-150px;
+    box-sizing:border-box;
+    width:240px;
+    height:350px;
+    overflow: hidden;
+}
 
+#ply_desc_image img {
+    width:240px;
+    height:350px;
+}
 
 /* team_rank */
 .team_rank {

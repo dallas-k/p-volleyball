@@ -20,8 +20,6 @@ function choosePosition (position,elmnt){
         positionTitle[i].style.color = "#ef7c7e";
     }
     document.getElementById(position).style.display = "block";
-    elmnt.style.background = "#f7a520";
-    elmnt.style.color = "#ffffff"
     
 }
 
@@ -39,6 +37,7 @@ function loadData(idx, elmnt){
             document.getElementById('ply_desc_reg').textContent = ply.register + "년";
             document.getElementById('ply_desc_school').textContent = ply.school;
             document.getElementById('ply_desc_body').textContent = ply.height + "cm / " + ply.weight + "kg";
+            document.querySelector('#ply_desc_image > img').src = "/volleyball/images/player_fullshot/"+idx+".png";
         }
     }
     xhttp.open("GET", url);
