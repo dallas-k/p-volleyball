@@ -20,7 +20,8 @@ function choosePosition (position,elmnt){
         positionTitle[i].style.color = "#ef7c7e";
     }
     document.getElementById(position).style.display = "block";
-    
+    document.getElementById(elmnt).style.backgroundColor = "#f7a520";
+    document.getElementById(elmnt).style.color = "#ffffff";
 }
 
 // 선수 데이터 json
@@ -42,20 +43,4 @@ function loadData(idx, elmnt){
     }
     xhttp.open("GET", url);
     xhttp.send();
-
-    let ply_back = document.querySelectorAll(".player_list li");
-    for (let i = 0; i < ply_back.length; i++){
-        ply_back[i].style.backgroundColor = "#ffffff";
-    }    
-    elmnt.style.backgroundColor = "rgb(247,165,32)";
 }
-
-// team_rank_table
-// let my_team = document.getElementsByClassName("my_team");
-// console.log(my_team);
-// for(let i = 0; i < my_team.length; i++){
-//     console.log(my_team[i].textContent);
-//     // if(my_team[i].textContent === '한국전력'){
-//     //     // my_team[i].classList += 'table_myteam';
-//     // }
-// }

@@ -1,5 +1,6 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +47,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                 
                 <h2 class="screen_out">선수소개</h2>
 
-                <h3 class="position" id="plyLeft" onclick="choosePosition('left_players',this)">레프트</h3>
+                <h3 class="position" id="plyLeft" onclick="choosePosition('left_players','plyLeft')">레프트</h3>
                 <ul class="player_list" id="left_players">
-                    <li id="seo1" onclick="loadData('seo1',this)" id="ply_list_first">서재덕</li>
+                    <li id="seo1" onclick="loadData('seo1',this)">서재덕</li>
                     <li id="gong13" onclick="loadData('gong13',this)">공재학</li>
                     <li id="koo5" onclick="loadData('koo5',this)">구교혁</li>
                     <li id="lim9" onclick="loadData('lim9',this)">임성진</li>
@@ -56,7 +57,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     <li id="ta4" class="sixth_player" onclick="loadData('ta4',this)">타이스</li>
                 </ul>
 
-                <h3 class="position" id="plyCenter" onclick="choosePosition('center_players',this)">센터</h3>
+                <h3 class="position" id="plyCenter" onclick="choosePosition('center_players','plyCenter')">센터</h3>
                 <ul class="player_list"  id="center_players">
                     <li id='shin22' onclick="loadData('shin22',this)">신영석</li>
                     <li id='park18' onclick="loadData('park18',this)">박지윤</li> 
@@ -66,13 +67,13 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     <li id='jung20' class="sixth_player" onclick="loadData('jung20',this)">정성환</li>
                 </ul>
 
-                <h3 class="position" id="plyRight" onclick="choosePosition('right_players',this)">라이트</h3>
+                <h3 class="position" id="plyRight" onclick="choosePosition('right_players','plyRight')">라이트</h3>
                 <ul class="player_list" id="right_players">
                     <li id='park3' onclick="loadData('park3',this)">박철우</li>
                     <li id='woo19' onclick="loadData('woo19',this)">우병헌</li>
                 </ul>
 
-                <h3 class="position" id="plySetter" onclick="choosePosition('setter_players',this)">세터</h3>
+                <h3 class="position" id="plySetter" onclick="choosePosition('setter_players','plySetter')">세터</h3>
                 <ul class="player_list"  id="setter_players">
                     <li id='kim15' onclick="loadData('kim15',this)">김광국</li>
                     <li id='lee7' onclick="loadData('lee7',this)">이민욱</li>
@@ -80,14 +81,14 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     <li id='ha6' onclick="loadData('ha6',this)">하승우</li>
                 </ul>
 
-                <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players',this)">리베로</h3>
+                <h3 class="position" id="plyLibero" onclick="choosePosition('libero_players','plyLibero')">리베로</h3>
                 <ul class="player_list" id="libero_players">
                     <li id='kim8' onclick="loadData('kim8',this)">김강녕</li>
                     <li id='lee12' onclick="loadData('lee12',this)">이지석</li>
                     <li id='jang10' onclick="loadData('jang10',this)">장지원</li>
                 </ul>
 
-                <h3 class="position" id="plyArmy" onclick="choosePosition('army_players',this)">군입대</h3>
+                <h3 class="position" id="plyArmy" onclick="choosePosition('army_players','plyArmy')">군입대</h3>
                 <ul class="player_list" id="army_players">
                     <li id='army4' onclick="loadData('army4',this)">금태용</li>
                     <li id='army19' onclick="loadData('army19',this)">박태환</li>
@@ -143,6 +144,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     arsort($points);
                     $points_desc = array_keys($points);
                     $s_array = array();
+
                     for($i = 0; $i < 7; $i++){
                         for($j = 0; $j < 7; $j++){
                             if($points_desc[$i] == $sum_sql[$j][0]){
@@ -178,7 +180,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
                     </table>
                     
 
-                    <a class="table_more" href="/volleyball/pages/game/rank.html">더보기</a>
+                    <a class="table_more" href="/volleyball/pages/game/rank.php">더보기</a>
                 </section>
             </div>
             <div class="content3">

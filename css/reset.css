@@ -8,7 +8,7 @@ body, a {
     color: black;
     font-size:13px;
     line-height:1.5;
-    font-family:"나눔고딕", "바른 고딕" sans-serif;
+    font-family:"나눔고딕OTF", "맑은 고딕", Arial;
 }
 dl, ul, ol, li {
     list-style: none;

@@ -200,20 +200,12 @@
 #lee7 {background:url(/volleyball/images/player_circle/07.jpg) no-repeat 40%;
     background-size: cover;}
 
-#ply_list_first {
-    background-color:#f7a520;
-}
-.player_list > li:hover {
-    background-color:#f7a520;
-}
 .player_list .sixth_player{
     position:absolute;
     top:100px;
 }
-
 .position:hover{
-    background-color:#f7a520;
-    color:#ffffff;
+    font-size:22px;
 }
 
 
