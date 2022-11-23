@@ -14,28 +14,30 @@
 /* next match */
 
 .next_match {
+    box-sizing: border-box;
     display:block;
     height:290px;
     width:290px;
     background: no-repeat url(/volleyball/images/next_match.jpg);
-    padding:100px 30px 20px 30px;
     box-sizing: border-box;
     position: absolute;
     right: 36px;
     top: 36px;
 }
 .match_day {
+    width:290px;
+    text-align:center;
     position:absolute;
     top:54px;
-    left:80px;
     font-weight: bold;
     color:red;
     font-size:16px;
 }
 .match_location {
+    width:290px;
+    text-align:center;
     position:absolute;
     top:84px;
-    left:92px;
     font-size:20px;
 }
 

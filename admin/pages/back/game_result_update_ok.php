@@ -11,49 +11,49 @@ $away_team = $_POST["away_team"];
 $home_db = $_POST["home_team"];
 switch($home_db){
     case "대한항공":
-        $home_db = 'daehan_result';
+        $home_db = 'result_daehan';
         break;
     case "KB손해보험":
-        $home_db = 'kb_result';
+        $home_db = 'result_kb';
         break;
     case "한국전력":
-        $home_db = 'hanjun_result';
+        $home_db = 'result_hanjun';
         break;
     case "삼성화재":
-        $home_db = 'samsung_result';
+        $home_db = 'result_samsung';
         break;
     case "OK금융그룹":
-        $home_db = 'ok_result';
+        $home_db = 'result_ok';
         break;
     case "우리카드":
-        $home_db = 'woori_result';
+        $home_db = 'result_woori';
         break;
     case "현대캐피탈":
-        $home_db = 'hyundai_result';
+        $home_db = 'result_hyundai';
         break;
 }
 $away_db = $_POST["away_team"];
 switch($away_db){
     case "대한항공":
-        $away_db = 'daehan_result';
+        $away_db = 'result_daehan';
         break;
     case "KB손해보험":
-        $away_db = 'kb_result';
+        $away_db = 'result_kb';
         break;
     case "한국전력":
-        $away_db = 'hanjun_result';
+        $away_db = 'result_hanjun';
         break;
     case "삼성화재":
-        $away_db = 'samsung_result';
+        $away_db = 'result_samsung';
         break;
     case "OK금융그룹":
-        $away_db = 'ok_result';
+        $away_db = 'result_ok';
         break;
     case "우리카드":
-        $away_db = 'woori_result';
+        $away_db = 'result_woori';
         break;
     case "현대캐피탈":
-        $away_db = 'hyundai_result';
+        $away_db = 'result_hyundai';
         break;
 }
 

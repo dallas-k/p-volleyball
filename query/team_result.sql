@@ -9,7 +9,7 @@ CREATE TABLE daehan_result (
     point INT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE kb_result (
+CREATE TABLE hanjun_result (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -20,6 +20,47 @@ CREATE TABLE kb_result (
     point INT NOT NULL DEFAULT 0
 );
 
+CREATE TABLE hyundai_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE kb_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
+CREATE TABLE ok_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
+CREATE TABLE samsung_result (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    enemy VARCHAR(16) NOT NULL,
+    day DATE NOT NULL,
+    win INT NOT NULL DEFAULT 0,
+    lose INT NOT NULL DEFAULT 0,
+    my_set INT NOT NULL DEFAULT 0,
+    enemy_set INT NOT NULL DEFAULT 0,
+    point INT NOT NULL DEFAULT 0
+);
 CREATE TABLE woori_result (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,

@@ -1,6 +1,5 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/connect.php";
-include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -122,6 +121,36 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
                 <section class="rank_table">
                     <h3 class="screen_out">팀 순위</h3>
 
+                    <?php
+                    $sql_daehan = "SELECT '대한항공', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM daehan_result;";
+                    $sql_hanjun = "SELECT '한국전력', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hanjun_result;";
+                    $sql_hyundai = "SELECT '현대캐피탈', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hyundai_result;";
+                    $sql_samsung = "SELECT '삼성화재', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM samsung_result;";
+                    $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM kb_result;";
+                    $sql_woori = "SELECT '우리카드', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM woori_result;";
+                    $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM ok_result;";
+                
+                    $points = array();
+                    $sum_sql = array();
+                    $sql_array = [$sql_daehan, $sql_hanjun, $sql_hyundai, $sql_kb, $sql_ok, $sql_samsung, $sql_woori];
+
+                    for($i = 0; $i < count($sql_array); $i++){
+                        $sum = mysqli_query($dbcon, $sql_array[$i]);
+                        $fetch = mysqli_fetch_row($sum);
+                        $points[$fetch[0]] = $fetch[5];
+                        $sum_sql[$i] = array($fetch[0],$fetch[1],$fetch[2],$fetch[3],$fetch[4],$fetch[5]);
+                    }
+                    arsort($points);
+                    $points_desc = array_keys($points);
+                    $s_array = array();
+                    for($i = 0; $i < 7; $i++){
+                        for($j = 0; $j < 7; $j++){
+                            if($points_desc[$i] == $sum_sql[$j][0]){
+                                $s_array[$i] = $sum_sql[$j];
+                            }}}
+                    $_SESSION['rank'] = $s_array;
+                    ?>
+
                     <table>
                         <caption>현재 순위 <span>3</span>위</caption>
 
@@ -133,17 +162,17 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
                             <th>패</th>
                             <th>승점</th>
                         </tr>
+                    
                         <?php
-                        
                         for($i = 0; $i < 4; $i++){
                         ?>
                         <tr>
                             <td><?php echo $i+1?>위</td>
-                            <td><?php echo $rank[$i][0];?></td>
-                            <td><?php echo $rank[$i][1]+$rank[$i][2];?>경기</td>
-                            <td><?php echo $rank[$i][1];?>승</td>
-                            <td><?php echo $rank[$i][2];?>패</td>
-                            <td><?php echo $rank[$i][5];?>점</td>
+                            <td><?php echo $s_array[$i][0];?></td>
+                            <td><?php echo $s_array[$i][1]+$s_array[$i][2];?>경기</td>
+                            <td><?php echo $s_array[$i][1];?>승</td>
+                            <td><?php echo $s_array[$i][2];?>패</td>
+                            <td><?php echo $s_array[$i][5];?>점</td>
                         </tr>
                         <?php }?>
                     </table>
@@ -152,7 +181,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/volleyball/back/inc/session.php";
                     <a class="table_more" href="/volleyball/pages/game/rank.html">더보기</a>
                 </section>
             </div>
-            
             <div class="content3">
                 <section class="content3_event">
                     <h2>이벤트</h2>

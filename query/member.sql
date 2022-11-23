@@ -5,9 +5,9 @@ CREATE TABLE members (
     pwd VARCHAR(16) NOT NULL,
     email VARCHAR(50),
     level CHAR(1),
-    sign_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    email_subscribe CHAR(1) DEFAULT 'N',
-    news_subscribe CHAR(1) DEFAULT 'N'
+    reg_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    e_sub CHAR(1) DEFAULT 'N',
+    n_sub CHAR(1) DEFAULT 'N'
 );
 
 INSERT INTO members (u_name, u_id, pwd, email,level) VALUES ('Administrator', 'admin', '1234', 'admin@hjvolleyball.com', '2');

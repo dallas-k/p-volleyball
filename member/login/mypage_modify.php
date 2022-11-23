@@ -10,9 +10,9 @@ $email_subscribe = $_POST["email_subscribe"];
 $news_subscribe = $_POST["news_subscribe"];
 
 if ($pwd) {
-    $sql = "UPDATE members SET u_name = '$u_name', pwd = '$pwd', email = '$email', email_subscribe = '$email_subscribe', news_subscribe = '$news_subscribe' WHERE idx=$s_idx;";
+    $sql = "UPDATE members SET u_name = '$u_name', pwd = '$pwd', email = '$email', e_sub = '$email_subscribe', n_sub = '$news_subscribe' WHERE idx=$s_idx;";
 } else {
-    $sql = "UPDATE members SET u_name = '$u_name', email = '$email', email_subscribe = '$email_subscribe', news_subscribe = '$news_subscribe' WHERE idx=$s_idx;";
+    $sql = "UPDATE members SET u_name = '$u_name', email = '$email', e_sub = '$email_subscribe', n_sub = '$news_subscribe' WHERE idx=$s_idx;";
 }
 
 mysqli_query($dbcon, $sql);
