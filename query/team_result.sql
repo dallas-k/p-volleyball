@@ -1,4 +1,4 @@
-CREATE TABLE daehan_result (
+CREATE TABLE result_daehan (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE daehan_result (
     point INT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE hanjun_result (
+CREATE TABLE result_hanjun (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE hanjun_result (
     point INT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE hyundai_result (
+CREATE TABLE result_hyundai (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE hyundai_result (
     point INT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE kb_result (
+CREATE TABLE result_kb (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE kb_result (
     enemy_set INT NOT NULL DEFAULT 0,
     point INT NOT NULL DEFAULT 0
 );
-CREATE TABLE ok_result (
+CREATE TABLE result_woori (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE ok_result (
     enemy_set INT NOT NULL DEFAULT 0,
     point INT NOT NULL DEFAULT 0
 );
-CREATE TABLE samsung_result (
+CREATE TABLE result_samsung (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE samsung_result (
     enemy_set INT NOT NULL DEFAULT 0,
     point INT NOT NULL DEFAULT 0
 );
-CREATE TABLE woori_result (
+CREATE TABLE result_ok (
     idx INT PRIMARY KEY AUTO_INCREMENT,
     enemy VARCHAR(16) NOT NULL,
     day DATE NOT NULL,
