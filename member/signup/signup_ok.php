@@ -8,7 +8,7 @@ $email = $_POST["email"];
 $email_subscribe = $_POST["email_subscribe"];
 $news_subscribe = $_POST["news_subscribe"];
 
-$sql = "INSERT INTO members (u_name, u_id, pwd, email, email_subscribe, news_subscribe)
+$sql = "INSERT INTO members (u_name, u_id, pwd, email, e_sub, n_sub)
 VALUES ('$u_name', '$u_id', '$pwd', '$email', '$email_subscribe', '$news_subscribe');";
 
 mysqli_query($dbcon, $sql);

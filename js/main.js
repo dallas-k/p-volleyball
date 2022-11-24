@@ -44,3 +44,16 @@ function loadData(idx, elmnt){
     xhttp.open("GET", url);
     xhttp.send();
 }
+
+window.onscroll = scrollF();
+
+function scrollF() {
+    let nVscroll = document.documentElement.scrollTop || this.document.body.scrollTop;
+    let sidebox = document.querySelector('.aside_box');
+    if(nVstroll > 40){
+        sidebox.style.position = 'fixed';
+    }
+    else {
+        sidebox.style.position = 'relative';
+    }
+}
