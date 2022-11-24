@@ -43,9 +43,31 @@
 }
 
 .form_container textarea {
-    margin: 24px 0 120px 72px;
+    width:1060px;
+    margin: 24px 0 12px 72px;
     font-size: 1.6em;
 }
 .form_container textarea::placeholder {
     font-size:1.6em;
+}
+
+.answer_area {
+    box-sizing:border-box;
+    padding:20px 0 20px;
+    width:1074px;
+    margin: 0px 0px 120px 72px;
+    border: 1px solid gray;
+}
+
+.answer_title {
+    padding:6px 12px;
+    font-size: 16px;
+    background-color:rgb(239,123,126);
+    color: white;
+}
+
+.answer_content {
+    margin-left:20px;
+    display:inline-block;
+    font-size: 16px;
 }

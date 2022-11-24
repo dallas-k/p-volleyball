@@ -5,6 +5,7 @@
     $sql = "SELECT * FROM board WHERE idx = $article_idx;";
     $result = mysqli_query($dbcon, $sql);
     $array = mysqli_fetch_array($result);
+    $answer = ($array['answer']) ? $array['answer'] : "답변이 아직 준비중입니다";
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +67,10 @@
                         <input type="text" name="qna_title" id="qna_title" value="<?php echo $array['title']?>">
                     </div>
                     <textarea name="qna_content" id="qna_content" rows="20" cols="100"><?php echo $array['content']?></textarea>
+                    <div class='answer_area'>
+                        <span class='answer_title'>답변</span>
+                        <p class='answer_content'><?php echo $answer;?></p>
+                    </div>
                 </form>
             </div>
         </main>

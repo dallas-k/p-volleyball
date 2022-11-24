@@ -8,14 +8,14 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <style>
         #link {color: blue; cursor:pointer;}
-        .editor {
-            margin-top:0;
-            padding-top:30px;
-        }
+
         .table_box{
-            top: 20px;
             position:relative;
         }
+        .admin_answer{
+            position:relative;
+        }
+
         #header1 {width:300px;}
         #header2 {width:80px;}
         #header3 {width:180px;}
@@ -23,24 +23,6 @@
         #header5 {width:120px;}
         table a {color: blue;}
         .hiddenToggle {display:none;}
-        .content {
-            background-color: bisque;
-        }
-        .user_query {
-            box-sizing:border-box;
-            background-color:white;
-            padding:4px 8px;
-            border:1px solid black;
-            margin-bottom:12px;
-        }
-        #admin_answer {margin:0px 12px;}
-        .answer_yes {
-            color: blue;
-        }
-        .answer_no {
-            color: black;
-            text-decoration-line: line-through;
-        }
     </style>
 </head>
 <body>
@@ -57,59 +39,45 @@
                 </div>
                 <div class="editor">
                     <div class="table_box">
+                        <?php
+                        $sql = "SELECT * FROM members WHERE level IS NULL;";
+                        $result = mysqli_query($dbcon, $sql);
+                        echo "<style>
+                            table tr td {text-align:center; padding:5px 10px; box-sizing:border-box;}
+                            #title, #content {text-align:left;}
+                            </style>";
+                        $num = 0;
+                        ?>
                         <table>
                             <tr>
-                                <th class='table_header' id='header1'>제목</th>
-                                <th class='table_header' id='header2'>작성자</th>
-                                <th class='table_header' id='header3'>날짜</th>
-                                <th class='table_header' id='header4'>조회수</th>
-                                <th class='table_header' id='header5'>답변</th>
+                                <th class='table_header' id='header1'>닉네임</th>
+                                <th class='table_header' id='header2'>이메일</th>
+                                <th class='table_header' id='header3'>가입날짜</th>
+                                <th class='table_header' id='header4'>이메일 수신여부</th>
+                                <th class='table_header' id='header5'>뉴스레터 수신여부</th>
                             </tr>
-
                             <?php
-                            $sql = "SELECT * FROM board ORDER BY idx DESC;";
-                            $result = mysqli_query($dbcon, $sql);
-                            echo "<style>
-                                table tr td {text-align:center; padding:5px 10px; box-sizing:border-box;}
-                                #title, #content {text-align:left;}
-                                </style>";
-                            $num = -1;
                             while ($array = mysqli_fetch_array($result)) {
                                 $num++;
                             ?>
                             <tr>
-                                <td class='title' id="title">
-                                    <?php echo $array["title"]; ?>
+                                <td>
+                                    <?php echo $num; ?>
                                 </td>
                                 <td>
                                     <?php echo $array["u_name"]; ?>
                                 </td>
                                 <td>
-                                    <?php echo $array["sign_date"]; ?>
+                                    <?php echo $array["email"]; ?>
                                 </td>
                                 <td>
-                                    <?php echo $array["click"]; ?>
+                                    <?php echo $array["reg_date"]; ?>
                                 </td>
-                                <td class='answer'>
-                                    <?php if($array['answer'] == ''){
-                                        echo "[답변 하기]";
-                                    } else {
-                                        echo '---';
-                                    }
-                                    ?>
+                                <td>
+                                    <?php echo $array["e_sub"]; ?>
                                 </td>
-                            </tr>
-                            <tr class='admin_answer'>
-                                <td colspan='5' class='content hiddenToggle' id='content'>
-                                    <p class='user_query'><?php echo $array["content"]; ?></p>
-                                    <div>
-                                        <form action="back/qna_answer.php" method='post'>
-                                            <input type="hidden" name="idx" value='<?php echo $array["idx"];?>'>
-                                            <label for="qna_answer">답변</label>
-                                            <textarea id='admin_answer' name='admin_answer' cols='80'><?php echo $array['answer'];?></textarea>
-                                            <button type='submit'>등록</button>
-                                        </form>
-                                    </div>
+                                <td>
+                                    <?php echo $array["n_sub"]; ?>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -136,6 +104,8 @@
             content[i].classList.toggle('hiddenToggle');
             })
         }
+        
+        
     </script>
     <?php mysqli_close($dbcon); ?>
 </body>

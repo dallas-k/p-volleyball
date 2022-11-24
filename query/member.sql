@@ -25,3 +25,14 @@ INSERT INTO members (u_name, u_id, pwd, email) VALUES ('티파니', 'tiffany', '
 INSERT INTO members (u_name, u_id, pwd, email) VALUES ('장규리', 'kyuri', 'kyuri123', 'kyuri@frm9.com');
 INSERT INTO members (u_name, u_id, pwd, email) VALUES ('우효', 'oohyo', 'oohyo123', 'oohyo@indie.com');
 INSERT INTO members (u_name, u_id, pwd, email) VALUES ('청하', 'chungha', 'chungha123', 'chunga@pr101.com');
+
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('홍길동', 'hong123', 'hong123', 'gildong@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('이순신', 'lee123', 'lee123', 'sunsing@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('세종대왕', 'sejong123', 'sejong123', 'idog@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('전봉준', 'jeon123', 'jeon123', 'nokdug@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('정조대왕', 'jeong123', 'jeong123', 'hwasung@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('장영실', 'jang123', 'jang123', 'youngsilg@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('강감찬', 'kang123', 'kang123', 'koreg@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('안중근', 'ahn123', 'ahn123', 'jungun@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('유관순', 'yoo123', 'yoo123', 'gwansoong@korea.co.kr');
+INSERT INTO members (u_name, u_id, pwd, email) VALUES ('허준', 'heo123', 'heo123', 'doctorg@korea.co.kr');

@@ -101,7 +101,7 @@ if($b_end_num > $total_page) {$b_end_num = $total_page;}
                     ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><a href="board/article.php?idx=<?php echo $array['idx']?>"><?php echo $title; ?></a></td>
+                        <td><a href="board/article.php?idx=<?php echo $array['idx']?>"><?php echo $title; ?></a><span class='answer_done'><?php echo ($array['answer'] != '') ? '[답변 완료]' : ''; ?></span></td>
                         <td><?php echo $name ?></td>
                         <td><?php echo substr($array["sign_date"],0,10); ?></td>
                         <td><?php echo $array["click"]; ?></td>

@@ -103,3 +103,8 @@
     font-size:24px;
     margin:0 5px 0 5px;
 }
+
+.answer_done {
+    margin-left:12px;
+    font-style: italic;
+}
