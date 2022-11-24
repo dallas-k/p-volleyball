@@ -123,13 +123,13 @@ session_start();
                     <h3 class="screen_out">팀 순위</h3>
 
                     <?php
-                    $sql_daehan = "SELECT '대한항공', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM daehan_result;";
-                    $sql_hanjun = "SELECT '한국전력', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hanjun_result;";
-                    $sql_hyundai = "SELECT '현대캐피탈', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM hyundai_result;";
-                    $sql_samsung = "SELECT '삼성화재', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM samsung_result;";
-                    $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM kb_result;";
-                    $sql_woori = "SELECT '우리카드', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM woori_result;";
-                    $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM ok_result;";
+                    $sql_daehan = "SELECT '대한항공', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_daehan;";
+                    $sql_hanjun = "SELECT '한국전력', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_hanjun;";
+                    $sql_hyundai = "SELECT '현대캐피탈', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_hyundai;";
+                    $sql_samsung = "SELECT '삼성화재', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_samsung;";
+                    $sql_kb = "SELECT 'KB손해보험', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_kb;";
+                    $sql_woori = "SELECT '우리카드', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_woori;";
+                    $sql_ok = "SELECT 'OK금융그룹', SUM(win), SUM(lose), SUM(my_set), SUM(enemy_set), SUM(point) FROM result_ok;";
                 
                     $points = array();
                     $sum_sql = array();

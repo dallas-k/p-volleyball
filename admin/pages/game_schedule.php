@@ -76,7 +76,7 @@
                                     <?php echo $array["round"] . "라운드" ?>
                                 </td>
                                 <td class="score_board">
-                                    <?php echo $array["home_score"] === NULL ? "입력 전" : $array["home_score"] . " : " . $array["away_score"]; ?>
+                                    <?php echo $array["home_score"] == "" ? "입력 전" : $array["home_score"]. " : " .$array["away_score"]; ?>
                                 </td>
                                 <td>
                                     <a class="score_update" onclick="updateResult(<?php echo $array['idx']; ?>)">[입력]</a>
