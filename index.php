@@ -154,7 +154,7 @@ session_start();
                     ?>
 
                     <table>
-                        <caption>현재 순위 <span>3</span>위</caption>
+                        <caption>현재 순위 <span><?php for($i = 0; $i < 7; $i++){ if($s_array[$i][0] == '한국전력') {echo $i+1;} }?></span>위</caption>
 
                         <tr class="table_th">
                             <th>순위</th>

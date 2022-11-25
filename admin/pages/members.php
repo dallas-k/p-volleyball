@@ -16,13 +16,15 @@
             position:relative;
         }
 
-        #header1 {width:300px;}
-        #header2 {width:80px;}
+        #header1 {width:80px;}
+        #header2 {width:120px;}
         #header3 {width:180px;}
-        #header4 {width:120px;}
-        #header5 {width:120px;}
+        #header4 {width:160px;}
+        #header5 {width:80px;}
+        #header6 {width:80px;}
         table a {color: blue;}
         .hiddenToggle {display:none;}
+
     </style>
 </head>
 <body>
@@ -50,16 +52,17 @@
                         ?>
                         <table>
                             <tr>
-                                <th class='table_header' id='header1'>닉네임</th>
-                                <th class='table_header' id='header2'>이메일</th>
-                                <th class='table_header' id='header3'>가입날짜</th>
-                                <th class='table_header' id='header4'>이메일 수신여부</th>
-                                <th class='table_header' id='header5'>뉴스레터 수신여부</th>
+                                <th class='table_header' id='header1'>번호</th>
+                                <th class='table_header' id='header2'>닉네임</th>
+                                <th class='table_header' id='header3'>이메일</th>
+                                <th class='table_header' id='header4'>가입날짜</th>
+                                <th class='table_header' id='header5'>이메일 수신여부</th>
+                                <th class='table_header' id='header6'>뉴스레터 수신여부</th>
                             </tr>
                             <?php
                             while ($array = mysqli_fetch_array($result)) {
                                 $num++;
-                            ?>
+                                ?>
                             <tr>
                                 <td>
                                     <?php echo $num; ?>
@@ -80,7 +83,7 @@
                                     <?php echo $array["n_sub"]; ?>
                                 </td>
                             </tr>
-                        <?php } ?>
+                            <?php } ?>
                         </table>
                     </div>
                 </div>
