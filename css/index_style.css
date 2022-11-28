@@ -390,6 +390,7 @@
 
 .aside_content {
     position:fixed;
+    z-index: 9;
     right: 100px;
     width:110px;
     height:438px;
@@ -404,7 +405,8 @@
 }
 
 #side_ticket a {
-    background:no-repeat url(/volleyball/images/side_ticket.jpg);
+    background:no-repeat url(/volleyball/images/side_ticket.png);
+    margin-bottom:4px;
 }
 #side_qna a{
     background:no-repeat url(/volleyball/images/side_qna.jpg);

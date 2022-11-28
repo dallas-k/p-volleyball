@@ -13,7 +13,7 @@
 
     .title_bar {
         background-color:red;
-        width:1200px;
+        width:100%;
         margin:auto;
     }
 
